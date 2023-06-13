@@ -1,0 +1,104 @@
+\documentclass[11pt, article, oneside]{memoir}
+
+% Some useful packages
+\usepackage
+{
+  microtype,
+  blindtext,
+  multirow,
+  makecell,
+  graphicx,
+  hyperref,
+  nicematrix,
+  mathtools,
+  amsthm,
+  amssymb,
+  thmtools,
+  bm,
+  siunitx,
+  caption
+}
+
+%% PDF Metadata
+\hypersetup
+{
+  hidelinks,
+  pdftitle    = Title,
+  pdfauthor   = Ashnah Khalid Khan
+}
+
+
+% Page Layout for Printing A4
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout%
+
+
+% Page Style
+\makepagestyle{SD}
+\nouppercaseheads
+\makeoddhead{SD}{\textsc{Theory of Automata}}{}{\textsc{Summer 2023}}
+\makeoddfoot{SD}{}{\thepage}{}
+\makeheadrule{SD}{\textwidth}{\normalrulethickness}
+% \makefootrule{SD}{\textwidth}{\normalrulethickness}
+\pagestyle{SD}
+
+% Paragraph Indent
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+% Command to make writing sets easier
+\newcommand{\set}[1]{\{\, #1\, \}}
+
+% Absolute Value Operator
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\begin{document}
+% -------------
+\begin{center}
+\LARGE{\textsc{Problem Set 1}}
+ 
+\large{\textsc{Ms. Asma Sanam Larik}}
+\end{center}
+
+\begin{enumerate}
+    % 1.
+    \item
+        Let \(L = \set{ w \in \set{0, 1, 2}^* \mid \text{\(w\) represents an integer in ternary that is divisible by \(7\)}}\). Draw a \textbf{DFA} for \(L\). Also include the transition table / function.
+    % 2.
+    \item 
+        Let \(\Sigma = \set{\text{\texttt{\#}}, \text{\texttt{!}}}\).
+        Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
+    % 3.
+    \item
+        Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
+        \[
+            L = \set{w \mid w \in \Sigma^* \text{ and }
+            \text{\(\abs{a}\) in \(w\) is a multiple of \(3\)}}
+        \]
+    % 4.
+    \item
+        Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
+    % 5.
+    \item
+        If \(w\) is a string then \(\text{\textit{SUFFIX}}(w)\) is all strings you can form by replacing all preceding symbols up to a symbol in \(w\) with the empty string. If \(L\) is a language, \(\text{\textit{SUFFIX}}(L)\) is defined in a similar way.
+        \begin{itemize}
+            \item
+                Give a definition of the language \(\text{\textit{SUFFIX}}(L)\) in the form
+                \[
+                    \text{\textit{SUFFIX}}(L) = \set{w \mid w \in \Sigma^* \text{ and } \ldots}.
+                \]
+            \item
+                Prove or disprove that if \(L\) is a regular language then \(\text{\textit{SUFFIX}}(L)\) is also regular.
+        \end{itemize}
+\end{enumerate}
+% -------------
+\end{document}
