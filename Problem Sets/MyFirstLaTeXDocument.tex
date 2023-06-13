@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\tinyspace}{\mspace{1mu}}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\bigabs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\Bigabs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggabs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\Biggabs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\rev}{\textup{\tiny R}}
+
+\newenvironment{mylist}[1]{\begin{list}{}{
+	\setlength{\leftmargin}{#1}
+	\setlength{\rightmargin}{0mm}
+	\setlength{\labelsep}{2mm}
+	\setlength{\labelwidth}{8mm}
+	\setlength{\itemsep}{0mm}}}
+	{\end{list}}
+	
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\title{Theory of Automata}
+\author{Summer 2023}
+\date{Problem Set 1}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+
+\item Let $L = \{ w \in \{0,1, 2\}^* \, | \, w \textrm{ represents an integer in ternary that is divisible by } 7\}$. Draw a \textbf{DFA} for $L$. Also include the transition table/function.
+
+\item  Let $\Sigma$ = (\#, !). Let $L = \bigl\{{\#^k}u{\#^k}\,|\,u\in\Sigma^{\ast}\,and\,k\,\ge\,1\bigr\}.$ Show that L is regular.
+
+\item Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over $\Sigma$ = (a, b):
+    \[
+    \op L = \bigl\{w\,|\,w\in\Sigma^{\ast}\,and\,
+    \text{$|a|$ in w is a multiple of 3}\bigr\}.
+    \]
+
+\item Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show each step \textbf{clearly.}
+
+\item If $w$ is a string then \text{\textit{SUFFIX(w)}} is all strings you can form by replacing all preceeding symbols upto a symbol in $w$ with the empty string. If $L$ is a language, \text{\textit{SUFFIX(L)}} is defined in a similar way.
+    \begin{itemize}
+        \item Give a description of the language \text{\textit{SUFFIX(L)}} in the form $SUFFIX(L) = \bigl\{w\,|\,w\in\Sigma^{\ast}\,and\,.....\bigr\}.$
+        \item Prove or disprove that if $L$ is a regular language then \text{\textit{SUFFIX(L)}} is also regular.
+    \end{itemize}
+
+\end{enumerate}
+\end{document}
