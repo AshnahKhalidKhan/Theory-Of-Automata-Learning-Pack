@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document} 
+
+\lecture{Problem Set 4}{\textit{Assigned: Wednesday, 11 April}}{Spring 2022}{Due: \textit{11:59 pm Saturday, 30 April}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+
+\item Let $\Sigma = \{0,1\}$ and let $A,B \subseteq \Sigma^*$ be languages. Prove that if $A$ is \textsf{NP}-hard, $B$ is in \textsf{P}, $A \cap B = \varnothing$, and $A \cup B \neq \Sigma^*$, then $A \cup B$ in \textsf{NP}-hard.
+
+\item Let $D = \{ \langle p \rangle \, | \, p \textrm{ is a polynomial in several variables having an integral root} \}$. Prove that $D$ is \textsf{NP-hard}, i.e., show that all problems in \textsf{NP} are polynomial time reducible $D$.
+
+\item This problem is inspired by the single-player game \emph{Minesweeper}, generalized to an arbitrary graph. Let $G$ be an undirected graph, where each node either contains a single, hidden mine or is empty. The player chooses nodes, one by one. If the player chooses a node containing a mine, the player loses. If the player chooses an empty node, the player learns the number of neighboring nodes containing mines. (A neighboring node is one connected to the chosen node by an edge.) The player
+wins if and when all empty nodes have been so chosen.
+
+In the \emph{mine consistency problem}, you are given a graph G along with numbers labeling some of $G$'s nodes. You must determine whether a placement of mines on the
+remaining nodes is possible, so that any node $v$ that is labeled $m$ has exactly $m$ neighboring nodes containing mines. Formulate this problem as a language and
+show that it is \textsf{NP-complete}.
+
+\item Show that if \textsf{P = NP}, you can factor integers in polynomial time.
+
+\item Sheikh Chilly isn't yet convinced about the practical applications of the \textsf{P} versus \textsf{NP} problem. You may convince him by identifying from the literature \emph{any} problem of your field of interest that has been been proven to be \textsf{NP-complete}. You \emph{must} submit a link to a valid resource that proves the problem to be \textsf{NP-complete}, as well as \emph{your} arguments regarding the consequences for the applications of this problem, if it turns out that \textsf{P = NP}. (\emph{Naturally, you may seek Sheikh Google's help on this}) 
+
+\end{enumerate}
+\end{document}
