@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 1}{\textit{Assigned: Friday, 20 Jan}}{Spring 2023}{Due: \textit{11:59 pm Sunday, 5 Feb.}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+\centerline{{\Large Plagiarized solutions, verbatim copies even with proper citation will receive zero credit.}}
+
+\begin{enumerate}
+\item Let $L = \{ w \in \{0,1,2\}^* \, | \, w \textrm{ represents an integer in ternary that is divisible by } 5\}$. Find an automaton for $L$.
+
+\item Let $\Sigma = \{a,b\}$. For each $k \geq 1$, let $L_k$ be the language consisting of all strings that contain an $a$ exactly $k$ places from the right-hand end of the string. Thus, $L_k = \Sigma^* a \Sigma^{k-1}$. Describe an NFA with $k+1$ states that recognizes $L_k$ using only $k+1$ states. Prove that for each $k$, no DFA can recognize $L_k$ with fewer than $2^k$ states. Thus, NFAs can give an exponential improvement over DFAs in terms of memory requirement.
+
+\item What is the smallest NFA you can design for $\{ a^n : n \ne 1003\}$. You should reason why your NFA is correct. 
+
+\item We say a state $q \in Q$ is a \emph{dead end} if $\delta^*(q,w) \cap F = \emptyset$ for all $w \in \Sigma^*$. Argue that we can without loss of generality assume that if $q$ is a dead end, then it is also a \emph{trap state}. A trap state is one from which you can never escape. Argue that we can assume that a DFA has at most one trap state. Finally, show that a regular language $L$ is accepted by a DFA with no trap state if and only if \textsf{PREFIX}$(L) = \Sigma^*$.
+
+\item If $w$ is a string then $VANISH(w)$ is all strings you can form by replacing some symbols in $w$ with the empty string. $VANISH(L)$ is defined in the obvious way. Prove or disprove that if $L$ is regular then $VANISH(L)$ is also regular.
+
+\end{enumerate}
+\end{document}
