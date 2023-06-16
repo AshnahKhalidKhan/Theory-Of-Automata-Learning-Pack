@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document} 
+
+\lecture{Problem Set 3}{\textit{Assigned: Saturday, 25 March}}{Spring 2023}{Due: \textit{11:59 pm Sunday, 9 April}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+
+\item Modify Turing's proof of the undecidability of the halting problem to show there is no Turing machine $P$ with the following two properties:
+\begin{enumerate}
+\item For all Turing machines $M$, if $M()$ accepts then $P (\langle M \rangle)$ accepts, while if $M()$ rejects then $P(\langle M \rangle)$ rejects.
+
+\item $P (x)$ halts for every input $x$. (In other words, if $M ( )$ runs forever, then $P (\langle M \rangle)$ can either accept or reject, but it cannot run forever.)
+\end{enumerate}
+
+\item Let a tile be a $1$-by-$1$ square, each of whose four edges has a color (chosen
+from some finite set of colors). Two tiles ``snap together'' along an edge,
+if and only if that edge has the same color on both of the tiles. The tiles
+are all aligned the same way, and cannot be rotated. Then given a finite
+set of tiles $C$, say that C ``fills the $n$-square'', if it's possible to fill a square
+of size $n$-by-$n$ with $n^2$ tiles from $C$ (where each tile in $C$ can be duplicated
+an unlimited number of times), so that every two neighboring tiles snap
+together.
+
+Call a set of tiles $C$ good if $C$ fills the $n$-square for every positive integer
+$n$. Let $TILE$ be the problem of deciding whether $C$ is good, given a
+description of $C$ as input. Show that $TILE$ is Turing-reducible to $HALT$.
+
+\item Let $H(n)$ be the number of $n$-state Turing machines that halt when run on a blank tape. Also, let $COUNT$ be the problem of calculating $H(n)$, given a positive integer $n$ as input.
+\begin{enumerate}
+\item Show $COUNT$ is Turing-reducible to $HALT$.
+
+\item Show $HALT$ is Turing-reducible to $COUNT$.
+
+\item Let $L = \{\langle n, a \rangle \, | \, H(n) \geq a \}$. Show $L$ is Turing-recognizable.
+\end{enumerate}
+
+\item Prove that there does not exist a DTM $M$ that simultaneously satisfies both of the following two properties:
+\begin{enumerate}
+\item If $K$ is a DTM that halts on all input strings over its alphabet and $L(K)$ is infinite, then $M$ accepts $\langle K \rangle$.
+\item If $K$ is a DTM that halts on all input strings over its alphabet and $L(K)$ is finite, then M does not accept $\langle K \rangle$.
+\end{enumerate}
+\emph{Hint:} Show that this implies that the language $ DIAG $ is Turing-recognizable, where
+\begin{equation*}
+DIAG = \{\langle T \rangle \, | \, T \textrm{ is a DTM and } \langle T \rangle \notin L(T) \}.
+\end{equation*}
+
+\end{enumerate}
+\end{document}
