@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document} 
+
+\lecture{Problem Set 4}{\textit{Assigned: Monday, 10 April}}{Spring 2023}{Due: \textit{11:59 pm Sunday, 7 May}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+
+
+\item Consider $n$-dimensional linear classifiers, that is, subsets of $\mathbb{R}^n$ that have the form
+\begin{equation*}
+\{ (x_1,x_2,\ldots,x_n) \, | \, a_1x_1 +  a_2 x_2 +\cdots + a_n x_n \geq b   \}
+\end{equation*}
+for some real numbers $a_1, \ldots, a_n $ and $b$. Given as input two sets $X$ and $Y$ of polynomially-many points in $\mathbb{R}^n$, show that there is a polynomial-time algorithm to decide whether there is a linear classifier containing all points in $X$ and no points in $Y$. (\emph{Hint:} You can assume that Linear Feasibility, that is, the problem of deciding whether a given set of linear inequalities in $n$ real variables has a solution or not, is in the class $\mathsf{P}$.)
+
+\item In The $\mathsf{DEG2}$ problem, the input is a system of equalities and inequalities, each involving polynomials of degree at most 2 (with integer coefficients) in $n$ real variables $x_1,x_2,\ldots,x_n$. The problem is to decide whether there exists an assignment to $x_1,x_2,\ldots,x_n$ that satisfies all the constraints simultaneously. As an example, the system
+\begin{align*}
+x_1 + x_2 & \leq 1 \\
+x_1 & \geq 0 \\
+x_2 & \geq 0 \\
+4x_1x_2 & \geq 1
+\end{align*}
+can be satisfied by setting $x_1 = x_2 = \frac{1}{2}$, but if we replaced the last inequality by $x_1x_2 \geq 1$, then the system would be unsatisfiable. Show that $\mathsf{DEG2}$ is $\mathsf{NP}$-hard, by reducing from $\mathsf{3COLORING}$.
+ 
+\item A new TV show, ``Techies-R-Us'', will feature an interesting and diverse set of students engaged in exciting technological pursuits such as design competitions and problem sets. The producers of the show must choose a set of students for its show from among a big population of actual students who think it would be cool to be on TV. In choosing the cast, the producers would like to satisfy a long list of quota constraints designed to ensure interesting diversity and improve ratings, e.g.,
+\begin{enumerate}
+\item Number of males over 6 feet tall: Exactly 2.
+\item Number of people who cry easily on camera: At least 1, at most 4.
+\item Number of people from Lahore: At most 3.
+\item  $\ldots$
+\end{enumerate}
+After making a long list of constraints, the producers realize that it’s not so easy to determine whether or not it is possible to satisfy all their constraints from a given population.
+\begin{enumerate}
+\item Define a formal set-theoretic problem \textsf{QUOTAS}, expressing the question of whether a given set of upper and lower bound constraints is satisfiable from a given population.
+
+\item Prove that your problem is \textsf{NP}-complete. For the reduction, reduce from \textsf{MINESWEEPER} defined in Sipser Problem 7.27.
+\end{enumerate}
+
+\item Recall that we defined $\mathsf{EXP} = \bigcup_k \mathsf{TIME}\left( 2^{n^k}\right)$ and $\mathsf{NEXP} = \bigcup_k \mathsf{NTIME}\left( 2^{n^k}\right)$. Just like it is an open problem whether $\mathsf{P = NP}$, it is also an open problem whether $\mathsf{EXP = NEXP}$. Show that if $\mathsf{P = NP}$, then $\mathsf{EXP = NEXP}$ also. [\emph{Hint:} Given a language $L \in  \mathsf{NEXP}$, can you come up with a modified language
+$L' \in \mathsf{NP}$, such that $L \in \mathsf{EXP}$ if and only if $L' \in \mathsf{P}$?]
+
+\end{enumerate}
+\end{document}
