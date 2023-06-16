@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 1}{\textit{Assigned: Thursday, 27 Jan}}{Spring 2022}{Due: \textit{11:59 pm Sunday, 13 Feb.}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+\item Let $L = \{ w \in \{0,1\}^* \, | \, w \textrm{ represents an integer in binary that is divisible by } 7\}$. Find an automaton for $L$.
+
+\item Let $\Sigma = \{a,b\}$ and $L = \{ w \in \Sigma^* \,| \, w = a^nua^n, n \geq 1 \textrm{ and } u \in \Sigma^*\}$. Prove whether $L$ is regular or not.
+
+
+\item Give a counterexample to show that the following construction fails to prove the closure of the class of regular languages under the star operation. Let $N_1 = (Q_1,\Sigma,\delta_1,q_1,F_1)$ recognize $A_1$. Construct $N = (Q_1,\Sigma,\delta,q_1,F)$ as follows. $N$ is supposed to recognize $A^*$.
+\begin{itemize}
+\item The states of $N$ are the states of $N_1$.
+\item The start state of $N$ is the same as the start state of $N_1$.
+\item $F=\{q_1\}\cup F_1$. The accept states $F$ are the old accept states plus start state.
+\item Define $\delta$ so that for any $q \in Q$ and any $a \in \Sigma \cup \{\lambda\}$,
+\begin{equation*}
+\delta(q,a) = 
+\begin{cases}
+    \delta_1(q,a) & q \notin F_1 \textrm{ or } a \neq \lambda\\
+    \delta_1(q,a) \cup \{q_1\}              & q \in F_1 \textrm{ and } a = \lambda.
+\end{cases}
+\end{equation*}
+\end{itemize}
+
+\item For languages $A$ and $B$, let the \emph{interleave} of $A$ and $B$ be the language
+\begin{equation*}
+\{w \,| \, w = a_1b_1 \ldots a_kb_k, \textrm{ where } a_1 \ldots a_k \in A \textrm{ and } b_1 \ldots b_k \in B, \textrm{ each } a_i, b_i \in \Sigma \}.
+\end{equation*}
+Show that the class of regular languages is closed under \emph{interleave}.
+
+\item Let $\Sigma = \{a,b\}$ and $L_k = \{ ww \,|\, w \in \Sigma^* \textrm{ and } w \textrm{ is of length } k \}$. Show that for each $k$, no DFA can recognize $L_k$ with fewer than $2^k$ states.
+
+
+		
+\item Let $L = \{1^n \, | \, n \textrm{ is composite}\}$. Show that $L$ is not regular.
+
+
+
+\end{enumerate}
+\end{document}
