@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document} 
+
+\lecture{Problem Set 3}{\textit{Assigned: Friday, 18 March}}{Spring 2021}{Due: \textit{11:59 pm Sunday, 3 April}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+
+\item Let $A$ and $B$ be two disjoint languages. We say that language $C$ is a \emph{barrier} between $A$ and $B$ if $A \subseteq C$ and $B \subseteq \overline{C}$. Show that any two disjoint co-Turing recognizable languages have a decidable barrier language between them.
+
+\item Let $A$ be a Turing-recognizable language consisting of descriptions of Turing machines, i.e.,
+\begin{equation*}
+A = \{\langle M_1 \rangle, \langle M_2 \rangle, \ldots \}, 
+\end{equation*}
+where every $M_i$ is a decider. Prove that some decidable language $D$ is not decided by any decider $M_i$ whose description appears in $A$.
+
+\item Consider the problem of determining whether a single-tape Turing machine ever writes a blank symbol over a non-blank symbol during the course of its computation
+on any input string. Formulate this problem as a language, and show that it is undecidable.
+
+\item Let $\Gamma = \{0,1,B\}$ be the tape alphabet for all TMs in this problem, where $B$ is the blank symbol. Define the Sheikh Chilly function $SC: \mathbb{N} \mapsto \mathbb{N}$ as follows. For each value of $k$, consider all $k$-state TMs that halt when started with a blank tape. Let $SC(k)$ be the maximum number of $1$s that remain on the tape among all of these machines. Show that $SC$ is not a computable function.
+
+\item Is the following language $X$ regarding single-tape TMs $M$ decidable? Prove your answer.
+\begin{equation*}
+X = \{ \langle M,w \rangle \, | \,  M \textrm{ never modifies the portion of the tape that contains the input } w \}.
+\end{equation*}
+
+\end{enumerate}
+\end{document}
+
