@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document} 
+
+\lecture{Problem Set 2}{\textit{Assigned: Friday, 17 Feb}}{Spring 2022}{Due: \textit{11:59 pm Sunday, 6 March.}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+\item Consider the following NFA $N$:
+\begin{figure}[h]
+\centering
+\scalebox{.8}{\includegraphics{nfa.png}}
+\end{figure}
+
+Give a DFA that recognizes the same language as $N$. \emph{Hint: Do not apply the NFA to DFA construction without thinking about $N$ first}.
+
+\item Let $\Sigma$ be an alphabet. The symmetric difference of two languages $A, B \subseteq \Sigma^*$ is defined as 
+\begin{equation*}
+A \Delta B = \left( A \cap \overline{B} \right) \cup \left( \overline{A} \cap B \right).
+\end{equation*}
+\begin{enumerate}
+\item Prove that if $A \subseteq \Sigma^*$ is a context-free language and $B \subseteq \Sigma^*$ is a finite language, then the language  $A \Delta B$ is context-free.
+\item Give an example of an alphabet $\Sigma$, a context-free language $A \subseteq \Sigma^*$, an a regular language $B \subseteq \Sigma^*$ for which the language $A \Delta B$ is not context-free.
+\end{enumerate}
+
+\item Let $C_{CFG} = \{\langle G,k \rangle \, | \, \textrm{ Language of CFG G contains exactly $k$ strings where $k\geq 0$ or $k=\infty$} \}.$ Show that $C_{CFG}$ is decidable.
+
+\item Give a CFG for the language
+\begin{equation*}
+L = \{ \# x_1 \# x_2 \# \cdots \# x_k \# \, | \, k \geq 2 \textrm{ and each } x_i \in \{a,b\}^* \textrm{ and for some } i, x_i = x_{i+1}^R\}.
+\end{equation*}
+
+\item Sheikh Chilly has bought the latest Turing Machine model TM202x for mining cryptocurrency that uses one-sided unbounded (on the left) tape. Unfortunately the TM was damaged during delivery such that that transition function can only implement the following mapping. 
+\begin{equation*}
+\delta : Q \times \Gamma \mapsto Q \times \Gamma \times \{L, BACK \}.
+\end{equation*}
+
+If $\delta(q, a) = (r, b,BACK)$, when the machine is in state $q$ reading an $a$, the machine's head jumps back to the right-hand end of the tape after it writes $b$ on the tape and enters state $r$. In other words, instead of being able to move the head one cell right, it can only move back to the start of the tape on the left end. Show Sheikh Chilly how he can program this TM202x to simulate an undamaged TM. 
+
+\end{enumerate}
+\end{document}
