@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\tinyspace}{\mspace{1mu}}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\bigabs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\Bigabs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggabs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\Biggabs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\rev}{\textup{\tiny R}}
+
+\newenvironment{mylist}[1]{\begin{list}{}{
+	\setlength{\leftmargin}{#1}
+	\setlength{\rightmargin}{0mm}
+	\setlength{\labelsep}{2mm}
+	\setlength{\labelwidth}{8mm}
+	\setlength{\itemsep}{0mm}}}
+	{\end{list}}
+	
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 2}{\textit{Assigned: Wednesday, 8 Feb}}{Spring 2023}{Due: \textit{11:59 pm Sunday, 26 Feb}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+
+\begin{enumerate}
+
+\item For any alphabet $\Sigma$ and any language $A\subseteq\Sigma^{\ast}$ we
+    define $\op{Prefix}(A)$ to be the language containing all prefixes of 
+    strings in $A$:
+    \[
+    \op{Prefix}(A) = \bigl\{x\in\Sigma^{\ast}\,:\,
+    \text{there exists $v\in\Sigma^{\ast}$ such that $xv\in A$}\bigr\}.
+    \]
+    Give an example of a nonregular language $A\subseteq\{0,1\}^{\ast}$ for
+    which $\op{Prefix}(A)$ is regular.
+
+\item Argue whether each of the following statement is True or False. Give a short, high-level proof if the statement is True and a counter-example if the statement is False. Assume that $\Sigma = \{0,1\}$ and that $A$ and $B$ are languages over $\Sigma$ for each of the statements.
+
+\begin{enumerate}
+\item If $A$ is nonregular, then there exists a nonregular language $B$ such that $A \cap B$ is finite.
+\item If $A$ is nonregular, then there exists a nonregular language $B$ such that $A \cap B$ is infinite.
+\item If $A$ is infinite, there must exist a language $B \subseteq A$ that is nonregular.
+
+\item If $A$ is nonregular, $B$ is regular, and $A \cap B = \emptyset$, then $A \cup B$ is nonregular.
+\end{enumerate}
+
+
+
+
+\item Let $\Sigma$ be any alphabet and let $A,B\subseteq\Sigma^{\ast}$ be given regular languages.
+  
+  \begin{mylist}{8mm}
+  \item[(a)]
+    Define a language $C\subseteq\Sigma^{\ast}$ as follows:
+    \[
+    C = \bigl\{u x v\,:\, u,x,v\in\Sigma^{\ast},\; uv\in A,\;
+    \text{and}\;x\in B\bigr\}.
+    \]
+    In words, $C$ is the language of all strings that can be obtained by first
+    choosing a string from $A$ and then \emph{inserting} anywhere into that
+    string any one string chosen from $B$.
+    Prove that $C$ is regular.
+
+  \item[(b)]
+    Define a language $D\subseteq\Sigma^{\ast}$ as follows:
+    \[
+    D = \bigl\{u v\,:\, u,x,v\in\Sigma^{\ast},\; uxv\in A,\;
+    \text{and}\; x\in B\bigr\}.
+    \]
+    In words, $D$ is the language of all strings that can be obtained by first
+    choosing a string from $A$ and then \emph{removing} from that string any
+    one substring that is contained in $B$.
+    Prove that $D$ is regular.
+    
+    \vspace{2mm}
+
+    Hint: you do not actually need to use the assumption that $B$ is regular
+    to conclude that $D$ is regular.
+
+  \end{mylist}
+
+\item Prove that the following language $L$ is not regular.
+  \[
+  L = \Bigl\{a^{p}\,:\,p \textrm{ is a prime number}\Bigr\}.
+  \]
+\item Give a context-free grammar for each of the following languages. You do not need to prove that your grammars are correct. However, if it is too difficult to verify the correctness of your grammars, you may lose points (even if they happen to be correct). You should therefore aim to give the simplest grammars possible, and it may be to your benefit to offer short explanations about how your grammars work.
+
+\begin{enumerate}
+\item $L_1 = \{0^n1^m  \, | \, m \leq n \leq 2m\}$.
+\item $L_2 = \{w \in \{0,1\}^* \, | \, w = w^R \textrm{ and the number of $1$'s in $w$ is divisible by $3$}\}$.
+\item $L_3 = \{a^k b^n c^m \, | \, k,n,m \geq 0 \textrm{ and } k+n=m\}$.
+\item $L_4 = \{a^k b^n c^m \, | \, k,n,m \geq 0 \textrm{ and } k+m=n\}$.
+\end{enumerate}
+\end{enumerate}
+\end{document}
