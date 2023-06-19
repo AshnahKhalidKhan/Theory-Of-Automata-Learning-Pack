@@ -1,0 +1,109 @@
+\documentclass[11pt, article, oneside]{memoir}
+
+% Some useful packages
+\usepackage
+{
+  microtype,
+  blindtext,
+  multirow,
+  makecell,
+  graphicx,
+  hyperref,
+  nicematrix,
+  mathtools,
+  amsthm,
+  amssymb,
+  thmtools,
+  bm,
+  siunitx,
+  caption
+}
+
+%% PDF Metadata
+\hypersetup
+{
+  hidelinks,
+  pdftitle    = Title,
+  pdfauthor   = Ashnah Khalid Khan
+}
+
+
+% Page Layout for Printing A4
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout%
+
+
+% Page Style
+\makepagestyle{SD}
+\nouppercaseheads
+\makeoddhead{SD}{\textsc{Theory of Automata}}{}{\textsc{Summer 2023}}
+\makeoddfoot{SD}{}{\thepage}{}
+\makeheadrule{SD}{\textwidth}{\normalrulethickness}
+% \makefootrule{SD}{\textwidth}{\normalrulethickness}
+\pagestyle{SD}
+
+% Paragraph Indent
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+% Command to make writing sets easier
+\newcommand{\set}[1]{\{\, #1\, \}}
+
+% Absolute Value Operator
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\begin{document}
+% -------------
+\begin{center}
+\LARGE{\textsc{Problem Set 2}}
+ 
+\large{\textsc{Ms. Asma Sanam Larik}}
+\end{center}
+
+\begin{enumerate}
+    % 1.
+    \item
+        Let \(L = \set{ w \in \set{0, 1, 2}^* \mid \text{\(w\) represents an integer in ternary that is divisible by \(7\)}}\). Draw a \textbf{DFA} for \(L\). Also include the transition table / function.
+    % 2.
+    \item 
+        Let \(\Sigma = \set{\text{\texttt{\#}}, \text{\texttt{!}}}\).
+        Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
+    % 3.
+    \item
+        Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
+        \[
+            L = \set{w \mid w \in \Sigma^* \text{ and }
+            \text{\(\abs{a}\) in \(w\) is a multiple of \(3\)}}
+        \]
+    % 4.
+    \item
+        Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
+    % 5.
+    \item
+        Let \(\Sigma^* = \set{\text{a}, \text{b}}^*\). Find a regular expression for the following languages:
+        \begin{enumerate}
+            % a)
+            \item
+                \(A = \set{ab^kw \mid k \ge 3 \text{ and } w \in \set{a, b}^+}\).
+            % b)
+            \item
+                \(B = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\)} \text{ = 2}}\).
+            % c)
+            \item
+                \(C = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\) }\le \text{3}}\).
+        \end{enumerate}
+    % 6.
+    \item
+        The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
+\end{enumerate}
+% -------------
+\end{document}
