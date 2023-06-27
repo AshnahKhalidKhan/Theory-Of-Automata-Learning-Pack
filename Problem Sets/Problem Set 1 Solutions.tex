@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt, article, oneside]{memoir}
+
+% Some useful packages
+\usepackage
+{
+  microtype,
+  blindtext,
+  multirow,
+  makecell,
+  graphicx,
+  hyperref,
+  nicematrix,
+  mathtools,
+  amsthm,
+  amssymb,
+  thmtools,
+  bm,
+  siunitx,
+  caption
+}
+
+%% PDF Metadata
+\hypersetup
+{
+  hidelinks,
+  pdftitle    = Title,
+  pdfauthor   = Ashnah Khalid Khan
+}
+
+
+% Page Layout for Printing A4
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout%
+
+
+% Page Style
+\makepagestyle{SD}
+\nouppercaseheads
+\makeoddhead{SD}{\textsc{Theory of Automata}}{}{\textsc{Summer 2023}}
+\makeoddfoot{SD}{}{\thepage}{}
+\makeheadrule{SD}{\textwidth}{\normalrulethickness}
+% \makefootrule{SD}{\textwidth}{\normalrulethickness}
+\pagestyle{SD}
+
+% Paragraph Indent
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+% Command to make writing sets easier
+\newcommand{\set}[1]{\{\, #1\, \}}
+
+% Absolute Value Operator
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\begin{document}
+% -------------
+\begin{center}
+\LARGE{\textsc{Problem Set 1 Solutions}}
+ 
+\large{\textsc{Ms. Asma Sanam Larik}}
+\end{center}
+
+\begin{enumerate}
+    % 1.
+    \item
+        Let \(L = \set{ w \in \set{0, 1, 2}^* \mid \text{\(w\) represents an integer in ternary that is divisible by \(7\)}}\). Draw a \textbf{DFA} for \(L\). Also include the transition table / function.
+        
+        \textbf{Solution:}
+        
+    % 2.
+    \item 
+        Let \(\Sigma = \set{\text{\texttt{\#}}, \text{\texttt{!}}}\).
+        Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
+        
+        \textbf{Solution:}
+        \\u can be written as \(\Sigma^*\) and given the condition that \(k \ge 1\), we can easily write \({\texttt{\#}^k}\) as \({\texttt{\#}^+}\) on either side of the expression. This yields us the expression \({\texttt{\#}^+}\Sigma^*{\texttt{\#}^+}\). If the number of \(\texttt{\#}\) symbols on either side is uneven, the remaining \(\texttt{\#}\) symbols can be interpreted as part of u i.e. \(\Sigma^*\). Since we can easily characterize this language L in the form of this regular expression, L is regular.
+
+        \textbf{Grading Scheme: (2 marks)}
+        \\(+0.5 marks) Attempt at proving regularity using any DFA/NFA or regular expression etc.
+        \\(+0.5 marks) Given DFA/NFA or regular expression starts and ends with \(\texttt{\#}\).
+        \\(+0.5 marks) All strings in language are accepted by DFA/NFA or recognized by regular expression.
+        \\(+0.5 marks) All strings NOT in language are rejected by DFA/NFA or NOT recognized by regular expression.
+        \\(-2 marks) Language not shown to be regular/ Use of pumping lemma to show regularity/ Plagiarism/ No solution given.
+        
+    % 3.
+    \item
+        Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
+        \[
+            L = \set{w \mid w \in \Sigma^* \text{ and }
+            \text{\(\abs{a}\) in \(w\) is a multiple of \(3\)}}
+        \]
+       
+        \textbf{Solution:}
+        \\
+
+        \textbf{Grading Scheme: (2 marks)}
+        \\
+        
+    % 4.
+    \item
+        Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
+        
+        \textbf{Solution:}
+        \\
+
+        \textbf{Grading Scheme: ( marks)}
+        \\
+        
+    % 5.
+    \item
+        Let \(\Sigma^* = \set{\text{a}, \text{b}}^*\). Find a regular expression for the following languages:
+        \begin{enumerate}
+            % a)
+            \item
+                \(A = \set{ab^kw \mid k \ge 3 \text{ and } w \in \set{a, b}^+}\).
+                        
+                \textbf{Solution:}
+        
+            % b)
+            \item
+                \(B = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\)} \text{ = 2}}\).
+                        
+                \textbf{Solution:}
+        
+            % c)
+            \item
+                \(C = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\) }\le \text{3}}\).
+                        
+                \textbf{Solution:}
+        
+        \end{enumerate}
+    % 6.
+    \item
+        The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
+                
+        \textbf{Solution:}
+        
+\end{enumerate}
+% -------------
+\end{document}
