@@ -111,20 +111,26 @@
         \]
        
         \textbf{Solution:}
-        \\
+        \\The given automaton should count the number of \(a\)'s in threes and accept, including the empty string and strings with no \(a\)'s. In addition, it should have at least one characteristic related to NFAs such as multiple transitions for same symbols and/or epsilon transitions etc.
 
-        \textbf{Grading Scheme: (2 marks)}
-        \\
+        \textbf{Grading Scheme:}
+        \\+5 marks - Complete DFA transition table made from correct NFA from Q3.
+        \\+2.5 marks - Complete DFA transition table given for incorrect automaton from Q3 (error carried forward grace marks).
+        \\-5 marks -  Plagiarism/ No solution given.
         
     % 4.
     \item
         Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
-        
-        \textbf{Solution:}
-        \\
 
-        \textbf{Grading Scheme: ( marks)}
-        \\
+        \textbf{Solution:}
+        \\Straightforward solution looking for well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\).
+
+        \textbf{Grading Scheme:}
+        \\+1 marks - Attempt at making a transition table.
+        \\+1 mark - All strings in language accepted by automaton.
+        \\+1 mark - All strings NOT in language rejected by automaton.
+        \\+1 mark - Automaton clearly some NFA.
+        \\-5 marks -  Plagiarism/ No solution given.
         
     % 5.
     \item
@@ -133,22 +139,25 @@
             % a)
             \item
                 \(A = \set{ab^kw \mid k \ge 3 \text{ and } w \in \set{a, b}^+}\).
-                        
-                \textbf{Solution:}
         
             % b)
             \item
                 \(B = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\)} \text{ = 2}}\).
-                        
-                \textbf{Solution:}
         
             % c)
             \item
                 \(C = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\) }\le \text{3}}\).
-                        
-                \textbf{Solution:}
-        
         \end{enumerate}
+
+        \textbf{Solution:}
+        \\The given automaton should count the number of \(a\)'s in threes and accept, including the empty string and strings with no \(a\)'s. In addition, it should have at least one characteristic related to NFAs such as multiple transitions for same symbols and/or epsilon transitions etc.
+
+        \textbf{Grading Scheme:}
+        \\+2 marks - Attempt at making any automaton (NFA/DFA).
+        \\+1 mark - All strings in language accepted by automaton.
+        \\+1 mark - All strings NOT in language rejected by automaton.
+        \\+1 mark - Automaton clearly some NFA.
+        \\-5 marks -  Plagiarism/ No solution given.
     % 6.
     \item
         The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
