@@ -170,17 +170,19 @@
         \\\textbf{c)} Observe all strings in C start and end with any one of these strings \{\(\lambda, a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb\)\}, and can have any other characters including \(\lambda\) in between.
 
         \textbf{Grading Scheme:}
-        \\+0.5 marks - Attempt at making any regular expression for all parts.
-        \\+1.5 marks - \(abbbb^*\Sigma^*\) or equivalent expression for \textbf{(a)}
-        \\+1.5 marks - \(\Sigma^2\Sigma^*\Sigma^2\) or equivalent expression for \textbf{(b)}
-        \\+1.5 marks - \(\{\lambda \Sigma^2 \Sigma^2\Sigma^2\}\Sigma^*\Sigma^2\) or equivalent expression for \textbf{(c)}
+        \\+0.5 marks - Attempt at making any regular expression for \textbf{all} parts.
+        \\+1.5 marks - \(a.bbb.\{b\}^*.\Sigma^*\) or equivalent expression for \textbf{(a)}
+        \\+1.5 marks - \(\Sigma^2.\Sigma^*.\Sigma^2\) or equivalent expression for \textbf{(b)}
+        \\+1.5 marks - \(\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}.\Sigma^*.\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}\) or equivalent expression for \textbf{(c)}
         \\-5 marks -  Plagiarism/ No solution given.
     % 6.
     \item
         The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
                 
         \textbf{Solution:}
-        
+        \\The language simply accepts all strings that are accepted by any automaton for A and at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definiton of the union of A and B given in Sipser, Page 60, with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B.
+
+        \textbf{Grading Scheme:}
 \end{enumerate}
 
 
