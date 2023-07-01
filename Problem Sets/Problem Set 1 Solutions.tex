@@ -182,9 +182,8 @@
         \textbf{Solution:}
         \\The language simply accepts all strings that are accepted by any automaton for A and at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B.
         
-        Let N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) be the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) be the \textbf{DFA} for B. N3 is the \textbf{NFA} for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where:
-
-        \(Q = q_0 \cup Q_A \cup Q_B \)
+        For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that:
+        \\\(F = F_A \cap \{Q_B - F_B\} \)
 
         \textbf{Grading Scheme:}
 \end{enumerate}
