@@ -195,27 +195,27 @@
 
 \begin{center}
 \begin{tikzpicture}
-  \node[state, initial left, initial text={}] (q0) at (1,0) {\(q_0\)};
+  \node[state, initial left, initial text={}] (q) at (1,0) {\(q\)};
 
-  \node[state, right=of q0] (q1) {\(q_1\)};
-  \node[state, right=of q1] (q2) {\(q_2\)};
-  \node[state, right=of q2] (q3) {\(q_3\)};
-
-
-  \node[state, below=of h] (x0) {\(x_0\)};
-  \node[state, right=of x0] (x1) {\(x_1\)};
-
-  \node[state, below=of x0] (l0) {\(\ell_0\)};
-  \node[state, right=of l0] (l1) {\(\ell_1\)};
-
-  \node[state, below=of l0] (a) {\(a\)};
-  \node[state, right=of a] (s) {\(s\)};
+  \node[state, right=of q] (q0) {\(q_0\)};
+  \node[state, right=of q0] (qa) {\(q_a\)};
+  \node[state, right=of qa] (qaa) {\(q_{aa}\)};
+  \node[state, accepting, right=of qaa] (qaaa) {\(q_{aaa}\)};
 
   \path[-stealth]
-    (q0) edge node[above] {\(\mathtt a\)} (q1)
-    (q1) edge node[above] {\(\mathtt a\)} (q2)
-    (q2) edge node[above] {\(\mathtt a\)} (q3)
+    (q) edge node[above] {\(\mathtt \lambda\)} (q0)
+    (q0) edge[loop above] node[right] {\(\mathtt b\)} (q0)
+    (q0) edge node[above] {\(\mathtt a\)} (qa)
+    (qa) edge[loop above] node[right] {\(\mathtt b\)} (qa)
+    (qa) edge node[above] {\(\mathtt a\)} (qaa)
+    (qaa) edge[loop above] node[right] {\(\mathtt b\)} (qaa)
+    (qaa) edge node[above] {\(\mathtt a\)} (qaaa)
+    (qaaa) edge[loop above] node[right] {\(\mathtt b\)} (qaaa)
+    (qaa) edge node[above] {\(\mathtt a\)} (qaaa)
+
+    
     % (q1) edge node[left] {\(\mathtt 1\)} (q2)
+    
     % (q2) edge[dashed] node[left] {\(\mathtt 1\)} (qd)
     % (qd) edge[dashed] node[left] {\(\mathtt 1\)} (qn)
     % (qn) edge[bend right=18] node[left] {\(\mathtt 1\)} (q0)
