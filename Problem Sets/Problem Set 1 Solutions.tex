@@ -92,7 +92,7 @@
 \large{\textsc{Ms. Asma Sanam Larik}}
 \end{center}
 
-\textbf{NOTE: All questions will be graded out of 5.}
+\textbf{NOTE: All questions will be graded out of 5. No marks have been deducted for making late submissions made exactly within one hour of the passing of the deadline.}
 
 \begin{enumerate}
     % 1.
@@ -180,12 +180,16 @@
         The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
                 
         \textbf{Solution:}
-        \\The language simply accepts all strings that are accepted by any automaton for A and at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B.
-        
-        For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that:
-        \\\(F = F_A \cap \{Q_B - F_B\} \)
+        \\The language simply accepts all strings that are accepted by any automaton for A and at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B. For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that: \( F = F_A \cap \{Q_B - F_B\} \)
 
         \textbf{Grading Scheme:}
+        \\+2 marks - \(A \cap B'\) or equivalent expression given.
+        \\+1 mark - Accurate set of states in 5-tuple automaton definition.
+        \\+1 mark - Accurate set of final states in 5-tuple automaton definition.
+        \\+1 mark - Accurate transition function in 5-tuple automaton definition.
+        \\-5 marks -  Plagiarism/ No expression given.
+        \\\textbf{Note: No credit deducted for proof by example or missing initial state transitions in transition function.}
+        
 \end{enumerate}
 
 
