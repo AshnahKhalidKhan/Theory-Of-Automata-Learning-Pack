@@ -94,151 +94,151 @@
 
 \textbf{NOTE: All questions will be graded out of 5. No marks have been deducted for making late submissions made exactly within one hour of the passing of the deadline. 1 mark deducted for all submissions made after that.}
 
-\begin{enumerate}
-    % 1.
-    \item
-        Let \(L = \set{ w \in \set{0, 1, 2}^* \mid \text{\(w\) represents an integer in ternary that is divisible by \(7\)}}\). Draw a \textbf{DFA} for \(L\). Also include the transition table / function.
+% \begin{enumerate}
+%     % 1.
+%     \item
+%         Let \(L = \set{ w \in \set{0, 1, 2}^* \mid \text{\(w\) represents an integer in ternary that is divisible by \(7\)}}\). Draw a \textbf{DFA} for \(L\). Also include the transition table / function.
         
-        \textbf{Solution:}
+%         \textbf{Solution:}
         
-    % 2.
-    \item 
-        Let \(\Sigma = \set{\text{\texttt{\#}}, \text{\texttt{!}}}\).
-        Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
+%     % 2.
+%     \item 
+%         Let \(\Sigma = \set{\text{\texttt{\#}}, \text{\texttt{!}}}\).
+%         Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
         
-        \textbf{Solution:}
-        \\u can be written as \(\Sigma^*\) and given the condition that \(k \ge 1\), we can easily write \({\texttt{\#}^k}\) as \({\texttt{\#}^+}\) on either side of the expression. This yields us the expression \({\texttt{\#}^+}\Sigma^*{\texttt{\#}^+}\). If the number of \(\texttt{\#}\) symbols on either side is uneven, the remaining \(\texttt{\#}\) symbols can be interpreted as part of u i.e. \(\Sigma^*\). Since we can easily characterize this language L in the form of this regular expression, L is regular.
+%         \textbf{Solution:}
+%         \\u can be written as \(\Sigma^*\) and given the condition that \(k \ge 1\), we can easily write \({\texttt{\#}^k}\) as \({\texttt{\#}^+}\) on either side of the expression. This yields us the expression \({\texttt{\#}^+}\Sigma^*{\texttt{\#}^+}\). If the number of \(\texttt{\#}\) symbols on either side is uneven, the remaining \(\texttt{\#}\) symbols can be interpreted as part of u i.e. \(\Sigma^*\). Since we can easily characterize this language L in the form of this regular expression, L is regular.
 
-        \textbf{Grading Scheme:}
-        \\+1 mark - Attempt at proving regularity using any DFA/NFA or regular expression etc.
-        \\+1 mark - Accepts strings starting and ending with \(\texttt{\#}\).
-        \\+1 mark - All strings in language accepted.
-        \\+1 mark - All strings NOT in language rejected.
-        \\+1 mark - Equivalence of given language and constructed DFA/NFA/regular expression implied.
-        \\-5 marks -  Language not shown to be regular/ Use of pumping lemma to show regularity/ Plagiarism/ No solution given.
+%         \textbf{Grading Scheme:}
+%         \\+1 mark - Attempt at proving regularity using any DFA/NFA or regular expression etc.
+%         \\+1 mark - Accepts strings starting and ending with \(\texttt{\#}\).
+%         \\+1 mark - All strings in language accepted.
+%         \\+1 mark - All strings NOT in language rejected.
+%         \\+1 mark - Equivalence of given language and constructed DFA/NFA/regular expression implied.
+%         \\-5 marks -  Language not shown to be regular/ Use of pumping lemma to show regularity/ Plagiarism/ No solution given.
         
-    % 3.
-    \item
-        Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
-        \[
-            L = \set{w \mid w \in \Sigma^* \text{ and }
-            \text{\(\abs{a}\) in \(w\) is a multiple of \(3\)}}
-        \]
+%     % 3.
+%     \item
+%         Construct an \textbf{NFA} that is \textbf{\underline{NOT a DFA}} for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
+%         \[
+%             L = \set{w \mid w \in \Sigma^* \text{ and }
+%             \text{\(\abs{a}\) in \(w\) is a multiple of \(3\)}}
+%         \]
         
-        \textbf{Solution:}
-        \\The given automaton should count the number of \(a\)'s in threes and accept, including the empty string and strings with no \(a\)'s. In addition, it should have at least one characteristic related to NFAs such as multiple transitions for same symbols and/or epsilon transitions etc.
+%         \textbf{Solution:}
+%         \\The given automaton should count the number of \(a\)'s in threes and accept, including the empty string and strings with no \(a\)'s. In addition, it should have at least one characteristic related to NFAs such as multiple transitions for same symbols and/or epsilon transitions etc.
 
-        \textbf{Grading Scheme:}
-        \\+1 marks - Attempt at making a transition table.
-        \\+1 mark - All strings in language accepted.
-        \\+1 mark - All strings NOT in language rejected.
-        \\+1 mark - Automaton is clearly an NFA.
-        \\-5 marks -  Plagiarism/ No solution given.
+%         \textbf{Grading Scheme:}
+%         \\+1 marks - Attempt at making a transition table.
+%         \\+1 mark - All strings in language accepted.
+%         \\+1 mark - All strings NOT in language rejected.
+%         \\+1 mark - Automaton is clearly an NFA.
+%         \\-5 marks -  Plagiarism/ No solution given.
         
-    % 4.
-    \item
-        Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
+%     % 4.
+%     \item
+%         Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
 
-        \textbf{Solution:}
-        \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\).
+%         \textbf{Solution:}
+%         \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\).
 
-        \textbf{Grading Scheme:}
-        \\+5 marks - Complete DFA transition table made from correct NFA from Q3.
-        \\+2.5 marks - Complete DFA transition table given for incorrect automaton from Q3 \textit{(error carried forward grace marks)}.
-        \\-5 marks -  Plagiarism/ No solution given.
+%         \textbf{Grading Scheme:}
+%         \\+5 marks - Complete DFA transition table made from correct NFA from Q3.
+%         \\+2.5 marks - Complete DFA transition table given for incorrect automaton from Q3 \textit{(error carried forward grace marks)}.
+%         \\-5 marks -  Plagiarism/ No solution given.
         
-    % 5.
-    \item
-        Let \(\Sigma^* = \set{\text{a}, \text{b}}^*\). Find a regular expression for the following languages:
-        \begin{enumerate}
-            % a)
-            \item
-                \(A = \set{ab^kw \mid k \ge 3 \text{ and } w \in \set{a, b}^+}\).
+%     % 5.
+%     \item
+%         Let \(\Sigma^* = \set{\text{a}, \text{b}}^*\). Find a regular expression for the following languages:
+%         \begin{enumerate}
+%             % a)
+%             \item
+%                 \(A = \set{ab^kw \mid k \ge 3 \text{ and } w \in \set{a, b}^+}\).
         
-            % b)
-            \item
-                \(B = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\)} \text{ = 2}}\).
+%             % b)
+%             \item
+%                 \(B = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\)} \text{ = 2}}\).
         
-            % c)
-            \item
-                \(C = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\) }\le \text{3}}\).
-        \end{enumerate}
+%             % c)
+%             \item
+%                 \(C = \set{vwv \mid v,w \in \set{a, b}^* \text{ and } \text{\(\abs{v}\) }\le \text{3}}\).
+%         \end{enumerate}
 
-        \textbf{Solution:}
-        \\\textbf{a)} Observe all strings in A start with one \(a\), are followed by at least three \(b\)'s and then by at least one other character.
-        \\\textbf{b)} Observe all strings in B start and end with any one of these strings \{\(aa, ab, ba, bb\)\}, and can have any other characters including \(\lambda\) in between.
-        \\\textbf{c)} Observe all strings in C start and end with any one of these strings \{\(\lambda, a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb\)\}, and can have any other characters including \(\lambda\) in between.
+%         \textbf{Solution:}
+%         \\\textbf{a)} Observe all strings in A start with one \(a\), are followed by at least three \(b\)'s and then by at least one other character.
+%         \\\textbf{b)} Observe all strings in B start and end with any one of these strings \{\(aa, ab, ba, bb\)\}, and can have any other characters including \(\lambda\) in between.
+%         \\\textbf{c)} Observe all strings in C start and end with any one of these strings \{\(\lambda, a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb\)\}, and can have any other characters including \(\lambda\) in between.
 
-        \textbf{Grading Scheme:}
-        \\+0.5 marks - Attempt at making any regular expression for \textbf{all} parts.
-        \\+1.5 marks - \(a.bbb.\{b\}^*.\Sigma^*\) or equivalent expression for \textbf{(a)}
-        \\+1.5 marks - \(\Sigma^2.\Sigma^*.\Sigma^2\) or equivalent expression for \textbf{(b)}
-        \\+1.5 marks - \(\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}.\Sigma^*.\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}\) or equivalent expression for \textbf{(c)}
-        \\-5 marks -  Plagiarism/ No solution given.
-    % 6.
-    \item
-        The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
+%         \textbf{Grading Scheme:}
+%         \\+0.5 marks - Attempt at making any regular expression for \textbf{all} parts.
+%         \\+1.5 marks - \(a.bbb.\{b\}^*.\Sigma^*\) or equivalent expression for \textbf{(a)}
+%         \\+1.5 marks - \(\Sigma^2.\Sigma^*.\Sigma^2\) or equivalent expression for \textbf{(b)}
+%         \\+1.5 marks - \(\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}.\Sigma^*.\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}\) or equivalent expression for \textbf{(c)}
+%         \\-5 marks -  Plagiarism/ No solution given.
+%     % 6.
+%     \item
+%         The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
                 
-        \textbf{Solution:}
-        \\The language simply accepts all strings that are accepted by any automaton for A and at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B. For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that: \( F = F_A \cap \{Q_B - F_B\} \)
+%         \textbf{Solution:}
+%         \\The language simply accepts all strings that are accepted by any automaton for A and are at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B. For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that: \( F = F_A \cap \{Q_B - F_B\} \)
 
-        \textbf{Grading Scheme:}
-        \\+2 marks - \(A \cap B'\) or equivalent expression given and any 5-tuple automaton definition given.
-        \\+1 mark - Accurate set of states.
-        \\+1 mark - Accurate set of final states.
-        \\+1 mark - Accurate transition function.
-        \\-5 marks -  Plagiarism/ No expression given.
-        \\\textbf{Note: No credit deducted for proof by example or missing initial state transitions in transition function.}
+%         \textbf{Grading Scheme:}
+%         \\+2 marks - \(A \cap B'\) or equivalent expression given and any 5-tuple automaton definition given.
+%         \\+1 mark - Accurate set of states.
+%         \\+1 mark - Accurate transition function.
+%         \\+1 mark - Accurate set of final states.
+%         \\-5 marks -  Plagiarism/ No expression given.
+%         \\\textbf{Note: No credit deducted for proof by example or missing initial state transitions in transition function.}
         
-\end{enumerate}
+% \end{enumerate}
 
 
-% \begin{center}
-% \begin{tikzpicture}
-%   \node[state, initial above, initial text={}] (q0) at (1,0) {\(q_0\)};
+\begin{center}
+\begin{tikzpicture}
+  \node[state, initial left, initial text={}] (q0) at (1,0) {\(q_0\)};
 
-%   \node[state, left=of q0] (q1) {\(q_1\)};
-%   \node[state, below=of q1] (q2) {\(q_2\)};
-%   \node[state, below=of q2, dashed] (qd) {};
-%   \node[state, below=of qd] (qn) {\(q_n\)};
+  \node[state, right=of q0] (q1) {\(q_1\)};
+  \node[state, right=of q1] (q2) {\(q_2\)};
+  \node[state, right=of q2] (q3) {\(q_3\)};
 
-%   \node[state, right=of q0] (h) {\(h\)};
 
-%   \node[state, below=of h] (x0) {\(x_0\)};
-%   \node[state, right=of x0] (x1) {\(x_1\)};
+  \node[state, below=of h] (x0) {\(x_0\)};
+  \node[state, right=of x0] (x1) {\(x_1\)};
 
-%   \node[state, below=of x0] (l0) {\(\ell_0\)};
-%   \node[state, right=of l0] (l1) {\(\ell_1\)};
+  \node[state, below=of x0] (l0) {\(\ell_0\)};
+  \node[state, right=of l0] (l1) {\(\ell_1\)};
 
-%   \node[state, below=of l0] (a) {\(a\)};
-%   \node[state, right=of a] (s) {\(s\)};
+  \node[state, below=of l0] (a) {\(a\)};
+  \node[state, right=of a] (s) {\(s\)};
 
-%   \path[-stealth]
-%     (q0) edge node[above] {\(\mathtt 1\)} (q1)
-%     (q1) edge node[left] {\(\mathtt 1\)} (q2)
-%     (q2) edge[dashed] node[left] {\(\mathtt 1\)} (qd)
-%     (qd) edge[dashed] node[left] {\(\mathtt 1\)} (qn)
-%     (qn) edge[bend right=18] node[left] {\(\mathtt 1\)} (q0)
+  \path[-stealth]
+    (q0) edge node[above] {\(\mathtt a\)} (q1)
+    (q1) edge node[above] {\(\mathtt a\)} (q2)
+    (q2) edge node[above] {\(\mathtt a\)} (q3)
+    % (q1) edge node[left] {\(\mathtt 1\)} (q2)
+    % (q2) edge[dashed] node[left] {\(\mathtt 1\)} (qd)
+    % (qd) edge[dashed] node[left] {\(\mathtt 1\)} (qn)
+    % (qn) edge[bend right=18] node[left] {\(\mathtt 1\)} (q0)
 
-%     (q0) edge node[above] {\(\mathtt 0\)} (h)
-%     (h) edge node[left] {\(\mathtt 1\)} (x0)
-%     (h) edge node[above right] {\(\mathtt 0\)} (x1)
+    % (q0) edge node[above] {\(\mathtt 0\)} (h)
+    % (h) edge node[left] {\(\mathtt 1\)} (x0)
+    % (h) edge node[above right] {\(\mathtt 0\)} (x1)
 
-%     (x0) edge node[left] {\(\mathtt 0\)} (l0)
-%     (x0) edge node[right, pos=0.75] {\(\mathtt 1\)} (l1)
+    (x0) edge node[left] {\(\mathtt 0\)} (l0)
+    (x0) edge node[right, pos=0.75] {\(\mathtt 1\)} (l1)
 
-%     (x1) edge node[left, pos=0.75] {\(\mathtt 0\)} (l0)
-%     (x1) edge node[right] {\(\mathtt 1\)} (l1)
+    (x1) edge node[left, pos=0.75] {\(\mathtt 0\)} (l0)
+    (x1) edge node[right] {\(\mathtt 1\)} (l1)
 
-%     (l0) edge node[left] {\(\mathtt 1\)} (a)
+    (l0) edge node[left] {\(\mathtt 1\)} (a)
 
-%     (l1) edge node[above left] {\(\mathtt 1\)} (a)
-%     (l1) edge node[right] {\(\mathtt 0\)} (s)
+    (l1) edge node[above left] {\(\mathtt 1\)} (a)
+    (l1) edge node[right] {\(\mathtt 0\)} (s)
 
-%     (s) edge[loop right] node[right] {\(\mathtt 0, \mathtt 1\)} (s)
+    (s) edge[loop right] node[right] {\(\mathtt 0, \mathtt 1\)} (s)
 
-%     (a) edge[bend left=18] node[right] {\(\mathtt 0, \mathtt 1\)} (q0);
-% \end{tikzpicture}
-% \end{center}
+    (a) edge[bend left=18] node[right] {\(\mathtt 0, \mathtt 1\)} (q0);
+\end{tikzpicture}
+\end{center}
 % -------------
 \end{document}
