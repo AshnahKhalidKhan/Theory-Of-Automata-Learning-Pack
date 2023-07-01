@@ -92,7 +92,11 @@
 \large{\textsc{Ms. Asma Sanam Larik}}
 \end{center}
 
-\textbf{NOTE: All questions will be graded out of 5. No marks have been deducted for making late submissions made exactly within one hour of the passing of the deadline. 1 mark deducted for all submissions made after that.}
+\textbf{Note:
+\\All questions will be graded out of 5.
+\\No marks have been deducted for late submissions made exactly within one hour of the passing of the deadline.
+\\1 mark deducted for all submissions made after 1 hour past the deadline.
+\\No marks deducted for submissions not made in Word or LaTeX.}
 
 \begin{enumerate}
     % 1.
@@ -218,10 +222,10 @@
         \end{center}
 
         \textbf{Grading Scheme:}
-        \\+1 marks - Attempt at making a transition table.
+        \\+1 mark - Attempt at making an automaton.
         \\+1 mark - All strings in language accepted.
         \\+1 mark - All strings NOT in language rejected.
-        \\+1 mark - Automaton is clearly an NFA.
+        \\+2 marks - Automaton is clearly an NFA, and not a DFA.
         \\-5 marks -  Plagiarism/ No solution given.
         
     % 4.
@@ -289,7 +293,8 @@
         \\The language simply accepts all strings that are accepted by any automaton for A and are at once rejected by that for B. An automaton can be defined  for \textit{DIFFERENCE(A and B)} as 5-tuple definition similar to the 5-tuple definition of the union of A and B given in Sipser (Page 60) with the addition that final states for the automaton for \textit{DIFFERENCE} will be the accept states of the automaton for A, and reject states for the automaton for B. For example, if N1 = (\(Q_A, \Sigma, \delta_B, q_A, F_A)\) is the \textbf{DFA} for A, and N2 = (\(Q_B, \Sigma, \delta_A, q_B, F_B)\) is the \textbf{DFA} for B, then N3 is the \textbf{NFA} that can be constructed for \textit{DIFFERENCE(A and B)} such that N3 = (\(Q, \Sigma, \delta, q_0, F)\) where all details are similar to the example given in the book, except that: \( F = F_A \cap \{Q_B - F_B\} \)
 
         \textbf{Grading Scheme:}
-        \\+2 marks - \(A \cap B'\) or equivalent expression given and any 5-tuple automaton definition given.
+        \\+1 mark - \(A \cap B'\) or equivalent expression given.
+        \\+1 mark - 5-tuple automaton definition, diagram or any indication of proof of regularity of language.
         \\+1 mark - Accurate set of states.
         \\+1 mark - Accurate transition function.
         \\+1 mark - Accurate set of final states.
