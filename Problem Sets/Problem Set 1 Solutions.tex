@@ -204,13 +204,13 @@
 
   \path[-stealth]
     (q) edge node[above] {\(\mathtt \lambda\)} (q0)
-    (q0) edge[loop above] node[right] {\(\mathtt b\)} (q0)
+    (q0) edge[loop above] node[above] {\(\mathtt b\)} (q0)
     (q0) edge node[above] {\(\mathtt a\)} (qa)
-    (qa) edge[loop above] node[right] {\(\mathtt b\)} (qa)
+    (qa) edge[loop above] node[above] {\(\mathtt b\)} (qa)
     (qa) edge node[above] {\(\mathtt a\)} (qaa)
-    (qaa) edge[loop above] node[right] {\(\mathtt b\)} (qaa)
+    (qaa) edge[loop above] node[above] {\(\mathtt b\)} (qaa)
     (qaa) edge node[above] {\(\mathtt a\)} (qaaa)
-    (qaaa) edge[loop above] node[right] {\(\mathtt b\)} (qaaa)
+    (qaaa) edge[loop above] node[above] {\(\mathtt b\)} (qaaa)
     (qaa) edge node[above] {\(\mathtt a\)} (qaaa)
 
     
@@ -224,20 +224,7 @@
     % (h) edge node[left] {\(\mathtt 1\)} (x0)
     % (h) edge node[above right] {\(\mathtt 0\)} (x1)
 
-    (x0) edge node[left] {\(\mathtt 0\)} (l0)
-    (x0) edge node[right, pos=0.75] {\(\mathtt 1\)} (l1)
-
-    (x1) edge node[left, pos=0.75] {\(\mathtt 0\)} (l0)
-    (x1) edge node[right] {\(\mathtt 1\)} (l1)
-
-    (l0) edge node[left] {\(\mathtt 1\)} (a)
-
-    (l1) edge node[above left] {\(\mathtt 1\)} (a)
-    (l1) edge node[right] {\(\mathtt 0\)} (s)
-
-    (s) edge[loop right] node[right] {\(\mathtt 0, \mathtt 1\)} (s)
-
-    (a) edge[bend left=18] node[right] {\(\mathtt 0, \mathtt 1\)} (q0);
+    (qaaa) edge[bend left=18] node[right] {\(\mathtt a\)} (qa);
 \end{tikzpicture}
 \end{center}
 % -------------
