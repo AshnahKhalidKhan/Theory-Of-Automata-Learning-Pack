@@ -162,7 +162,24 @@
         Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
 
         \textbf{Solution:}
-        \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\).
+        \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\). For example, for the NFA above:
+        \begin{center}
+        \begin{tabular}{|c|c|c|} 
+            \hline
+            State & a & b\\
+            \hline
+            \(q\) & \(q_{a}\) & \(q_{0}\)\\ 
+            \hline
+            \(q_0\) & \(q_{a}\) & \(q_{0}\)\\ 
+            \hline
+            \(q_{a}\) & \(q_{aa}\) & \(q_{a}\)\\ 
+            \hline
+            \(q_{aa}\) & \(q_{aaa}\) & \(q_{aa}\)\\ 
+            \hline
+            \(q_{aaa}\) & \(q_{a}\) & \(q_{aaa}\)\\ 
+            \hline
+        \end{tabular}
+        \end{center}
 
         \textbf{Grading Scheme:}
         \\+5 marks - Complete DFA transition table made from correct NFA from Q3.
