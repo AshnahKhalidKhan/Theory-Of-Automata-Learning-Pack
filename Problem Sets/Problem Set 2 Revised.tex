@@ -1,0 +1,111 @@
+\documentclass[11pt, article, oneside]{memoir}
+
+% Some useful packages
+\usepackage
+{
+  microtype,
+  blindtext,
+  multirow,
+  makecell,
+  graphicx,
+  hyperref,
+  nicematrix,
+  mathtools,
+  amsthm,
+  amssymb,
+  thmtools,
+  bm,
+  siunitx,
+  caption
+}
+
+%% PDF Metadata
+\hypersetup
+{
+  hidelinks,
+  pdftitle    = Title,
+  pdfauthor   = Ashnah Khalid Khan
+}
+
+
+% Page Layout for Printing A4
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout%
+
+
+% Page Style
+\makepagestyle{SD}
+\nouppercaseheads
+\makeoddhead{SD}{\textsc{Theory of Automata}}{}{\textsc{Summer 2023}}
+\makeoddfoot{SD}{}{\thepage}{}
+\makeheadrule{SD}{\textwidth}{\normalrulethickness}
+% \makefootrule{SD}{\textwidth}{\normalrulethickness}
+\pagestyle{SD}
+
+% Paragraph Indent
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+% Command to make writing sets easier
+\newcommand{\set}[1]{\{\, #1\, \}}
+
+% Absolute Value Operator
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\begin{document}
+% -------------
+\begin{center}
+\LARGE{\textsc{Problem Set 2}}
+ 
+\large{\textsc{Ms. Asma Sanam Larik}}
+\end{center}
+
+\begin{enumerate}
+    % 1.
+    \item
+        Let \(\Sigma = \set{a, b, c}\) and \(L = \set{ {a^i}{b^j}{c^k} \mid i, j, k \ge 0 \text{ and if } i = 1,  \text{ then } j = k}\). Show that \textit{L} is not regular using the pumping lemma.
+        \\\textbf{Hint:} You must show both cases where when \(w = xyz\) that \(x = \lambda\) and where \(x\) is composed of some characters.
+    % 2.
+    \item 
+        Let \(\Sigma = \set{0, 1, +, =}\) and \(ADD = \{ u+v=w \mid u, v, w \in \set{0, 1}^* \text{ and } u+v=w \text{ is a valid addition operation}\}\). Show that \textit{ADD} is not regular using the pumping lemma.
+    % 3.
+    \item
+        For each of the following grammars, determine if they are ambiguous or unambiguous. If they are ambiguous, prove that by giving two parse trees for one same string.
+        \begin{enumerate}
+            % a)
+            \item
+                \(S \rightarrow XY \mid W \)
+                \\\(X \rightarrow aXb \mid \lambda\)
+                \\\(Y \rightarrow cY \mid \lambda\)
+                \\\(W \rightarrow aWc \mid Z\)
+                \\\(Z \rightarrow bZ \mid \lambda\)
+            % b)
+            \item
+                \(S \rightarrow XX \)
+                \\\(X \rightarrow aXb\)
+                \\\(Y \rightarrow cY \mid \lambda\)
+            % c)
+            \item
+                \(S \rightarrow aXY \mid bYX \mid \lambda \)
+                \\\(Z \rightarrow aZ \mid a\)
+                \\\(X \rightarrow aXY \mid a \lambda\)
+                \\\(Y \rightarrow bYZ \mid b \mid \lambda\) 
+        \end{enumerate}
+    % 4.
+    \item
+        Construct a CFG for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
+        \[
+            L = \set{x_1\#x_2\#...\#x_k \mid k \ge 1, \text{ each } x_i \in \Sigma^* \text{ and for some } i \text{ and } j \text{, } x_i = {x_j}^R}
+        \]    
+\end{enumerate}
+% -------------
+\end{document}
