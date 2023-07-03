@@ -87,8 +87,7 @@
 
 \textbf{Note:
 \\All questions will be graded out of 5.
-\\No marks have been deducted for late submissions made exactly within one hour of the passing of the deadline.
-\\1 mark deducted for all submissions made after 1 hour past the deadline.
+\\Only 1 mark has been deducted for making a late submission.
 \\No marks deducted for submissions not made in Word or LaTeX.}
 
 \begin{enumerate}
@@ -164,7 +163,6 @@
         \\+1 mark - All strings NOT in language rejected.
         \\+2 marks - Accurate transition table/function given.
         \\+1 mark - Accurate accept states.
-        \\-5 marks -  Language not shown to be regular/ Use of pumping lemma to show regularity/ Plagiarism/ No solution given.
         
     % 2.
     \item 
@@ -172,7 +170,7 @@
         Let \(L = \set{{\texttt{\#}^k}u{\texttt{\#}^k} \mid u \in \Sigma^* \text{ and } k \ge 1}\). Show that \(L\) is regular.
         
         \textbf{Solution:}
-        \\u can be written as \(\Sigma^*\) and given the condition that \(k \ge 1\), we can easily write \({\texttt{\#}^k}\) as \({\texttt{\#}^+}\) on either side of the expression. This yields us the expression \({\texttt{\#}^+}\Sigma^*{\texttt{\#}^+}\). If the number of \(\texttt{\#}\) symbols on either side is uneven, the remaining \(\texttt{\#}\) symbols can be interpreted as part of u i.e. \(\Sigma^*\). Since we can easily characterize this language L in the form of this regular expression, L is regular.
+        \\u can be written as \(\Sigma^*\) and given the condition that \(k \ge 1\), we can easily write \({\texttt{\#}^k}\) as \({\texttt{\#}^+}\) on either side of the expression. This yields us the expression \({\texttt{\#}^+}\Sigma^*{\texttt{\#}^+}\). If the number of \(\texttt{\#}\) symbols on either side is uneven, the remaining \(\texttt{\#}\) symbols can be interpreted as part of u i.e. \(\Sigma^*\). Since we can easily characterize this language L in the form of this regular expression, L is regular. Please note that \textbf{pumping lemma is NEVER used to prove a language is regular.} It is only used to prove a language is not regular. \textbf{There may be a non-regular language on which the pumping lemma holds. But if the lemma does not hold, the language is definitely non-regular.}
 
         \textbf{Grading Scheme:}
         \\+1 mark - Attempt at proving regularity using any DFA/NFA or regular expression etc.
@@ -180,7 +178,7 @@
         \\+1 mark - All strings in language accepted.
         \\+1 mark - All strings NOT in language rejected.
         \\+1 mark - Equivalence of given language and constructed DFA/NFA/regular expression implied.
-        \\-5 marks -  Language not shown to be regular/ Use of pumping lemma to show regularity/ Plagiarism/ No solution given.
+        \\(Only +2.5 marks awarded for using pumping lemma to prove regularity)
         
     % 3.
     \item
@@ -219,14 +217,13 @@
         \\+1 mark - All strings in language accepted.
         \\+1 mark - All strings NOT in language rejected.
         \\+2 marks - Automaton is clearly an NFA and not a DFA.
-        \\-5 marks -  Plagiarism/ No solution given.
         
     % 4.
     \item
         Convert your NFA from the previous question into a \textbf{DFA}. Make sure you show \textbf{each} step clearly.
 
         \textbf{Solution:}
-        \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\). For example, for the NFA above:
+        \\Straightforward solution with well-defined complete transition table from each visited state to next state for both characters \(a\) and \(b\). \textbf{DFA need not be a minimized DFA}. For example, for the NFA above:
         \begin{center}
         \begin{tabular}{|c|c|c|} 
             \hline
@@ -248,7 +245,6 @@
         \textbf{Grading Scheme:}
         \\+5 marks - Complete DFA transition table made from correct NFA from Q3.
         \\+2.5 marks - Complete DFA transition table given for incorrect automaton from Q3 \textit{(error carried forward grace marks)}.
-        \\-5 marks -  Plagiarism/ No solution given.
         
     % 5.
     \item
@@ -279,7 +275,7 @@
         \\+1.5 marks - \(a.bbb.\{b\}^*.\Sigma^*\) or equivalent expression for \textbf{(a)}
         \\+1.5 marks - \(\Sigma^2.\Sigma^*.\Sigma^2\) or equivalent expression for \textbf{(b)}
         \\+1.5 marks - \(\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}.\Sigma^*.\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}\) or equivalent expression for \textbf{(c)}
-        \\-5 marks -  Plagiarism/ No solution given.
+
     % 6.
     \item
         The language \textit{DIFFERENCE(A and B)} contains all strings in language A that are not in language B. Formulate this language as a combination of closure properties you have discussed in class ($A \cup B$, $A \cap B$, $A^*$, $\overline{A}$ etc) to show the class of regular languages is closed under \textit{DIFFERENCE}.
@@ -293,7 +289,6 @@
         \\+1 mark - Accurate set of states.
         \\+1 mark - Accurate transition function.
         \\+1 mark - Accurate set of final states.
-        \\-5 marks -  Plagiarism/ No expression given.
         \\\textbf{Note: No marks deducted for proof by example or missing initial state transitions in transition function.}
         
 \end{enumerate}
