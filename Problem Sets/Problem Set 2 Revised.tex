@@ -74,9 +74,11 @@
     \item
         Let \(\Sigma = \set{a, b, c}\) and \(L = \set{ {a^i}{b^j}{c^k} \mid i, j, k \ge 0 \text{ and if } i = 1,  \text{ then } j = k}\). Show that \textit{L} is not regular using the pumping lemma.
         \\\textbf{Hint:} You must show both cases where when \(w = xyz\) that \(x = \lambda\) and where \(x\) is composed of some characters.
+        
     % 2.
     \item 
         Let \(\Sigma = \set{0, 1, +, =}\) and \(ADD = \{ u+v=w \mid u, v, w \in \set{0, 1}^* \text{ and } u+v=w \text{ is a valid addition operation}\}\). Show that \textit{ADD} is not regular using the pumping lemma.
+        
     % 3.
     \item
         For each of the following grammars, determine if they are ambiguous or unambiguous. If they are ambiguous, prove that by giving two parse trees for one same string.
@@ -100,12 +102,33 @@
                 \\\(X \rightarrow aXY \mid a \lambda\)
                 \\\(Y \rightarrow bYZ \mid b \mid \lambda\) 
         \end{enumerate}
+        
     % 4.
     \item
-        Construct a CFG for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
-        \[
-            L = \set{x_1\#x_2\#...\#x_k \mid k \ge 1, \text{ each } x_i \in \Sigma^* \text{ and for some } i \text{ and } j \text{, } x_i = {x_j}^R}
-        \]    
+        Construct a CFG for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}, \texttt{c}}\):
+        \begin{enumerate}
+            % a)
+            \item
+                \(A = \set{xby \mid x, y \in \{a\}^*}\) 
+            % b)
+            \item
+                \(B = \set{ {a^i}{b^j}{c^k} \mid j = i + k}\)
+            % c)
+            \item
+                \(C = \set{ {a^i}{b^j}{c^k} \mid j = i \text{ or } j = k}\)
+        \end{enumerate}
+        
+    % 5.
+    \item
+        Construct push-down automata for the following languages:
+        \begin{enumerate}
+            % a)
+            \item
+                \(A = \set{w \mid w \text{ is a palindrome i.e. } w = w^R \text{ and } w, w^R \in \{0, 1\}^*}\) 
+            % b)
+            \item
+                \(B = \set{ {0^i}{1^j}{2^k} \mid i = j + k}\)
+        \end{enumerate}
 \end{enumerate}
 % -------------
 \end{document}
