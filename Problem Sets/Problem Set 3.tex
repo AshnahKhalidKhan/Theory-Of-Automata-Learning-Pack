@@ -83,6 +83,32 @@
 \begin{enumerate}
     % 1.
     \item
+
+
+
+
+
+    \\
+    \\A Turing machine with left reset is similar to an ordinary Turing machine, but the
+transition function has the form
+δ : Q × Γ−→Q × Γ × {R, RESET}.
+If δ(q, a) = (r, b, RESET), when the machine is in state q reading an a, the machine’s head jumps to the left-hand end of the tape after it writes b on the tape and
+enters state r. Note that these machines do not have the usual ability to move the
+head one symbol left. Show that Turing machines with left reset recognize the class
+of Turing-recognizable languages.
+
+    \item 
+    Consider a Turing machine that, on any particular move, can either change the tape symbol or
+move the read-write head, but not both.
+(a) Give a formal definition of such a machine.
+(b) Show that the class of such machines is equivalent to the class of standard Turing machines.
+
+
+    \item
+    Consider the problem of determining whether a DFA and a regular expression are
+equivalent. Express this problem as a language and show that it is decidable.
+    
+    \item
         Let \(\Sigma = \set{a, b, c}\) and \(L = \set{ {a^i}{b^j}{c^k} \mid i, j, k \ge 0 \text{ and if } i = 1,  \text{ then } j = k}\). Show that \textit{L} is not regular using the pumping lemma.
         \\\textbf{Hint:} You must show both cases where when \(w = xyz\) that \(x = \lambda\) and where \(x\) is composed of some characters.
     % 2.
