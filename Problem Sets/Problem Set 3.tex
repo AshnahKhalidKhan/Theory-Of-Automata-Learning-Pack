@@ -131,57 +131,17 @@
     \\Let \(I = \set{\langle M\rangle \mid \text{M is a TM and L(M) is an infinite language}}\). Show that \(I\) is:
     \\(a) undecidable, using a reduction from another undecidable language.
     \\(b) Turing-\textbf{un}recognizable, using a reduction from another \textbf{un}recognizable language.
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    % 9. Computation of  Time Complexity of some algorithms
+    % 10. Some examples of NP Complete problems.
     \item
-        Let \(\Sigma = \set{a, b, c}\) and \(L = \set{ {a^i}{b^j}{c^k} \mid i, j, k \ge 0 \text{ and if } i = 1,  \text{ then } j = k}\). Show that \textit{L} is not regular using the pumping lemma.
-        \\\textbf{Hint:} You must show both cases where when \(w = xyz\) that \(x = \lambda\) and where \(x\) is composed of some characters.
-    % 2.
-    \item 
-        Let \(\Sigma = \set{0, 1, +, =}\) and \(ADD = \{ u+v=w \mid u, v, w \in \set{0, 1}^* \text{ and } u+v=w \text{ is a valid addition operation}\}\). Show that \textit{ADD} is not regular using the pumping lemma.
-    % 3.
-    \item
-        For each of the following grammars, determine if they are ambiguous or unambiguous. If they are ambiguous, prove that by giving two parse trees for one same string.
-        \begin{enumerate}
-            % a)
-            \item
-                \(S \rightarrow XY \mid W \)
-                \\\(X \rightarrow aXb \mid \lambda\)
-                \\\(Y \rightarrow cY \mid \lambda\)
-                \\\(W \rightarrow aWc \mid Z\)
-                \\\(Z \rightarrow bZ \mid \lambda\)
-            % b)
-            \item
-                \(S \rightarrow XX \)
-                \\\(X \rightarrow aXb\)
-                \\\(Y \rightarrow cY \mid \lambda\)
-            % c)
-            \item
-                \(S \rightarrow aXY \mid bYX \mid \lambda \)
-                \\\(Z \rightarrow aZ \mid a\)
-                \\\(X \rightarrow aXY \mid a \lambda\)
-                \\\(Y \rightarrow bYZ \mid b \mid \lambda\) 
-        \end{enumerate}
-    % 4.
-    \item
-        Construct a CFG for the following language over \(\Sigma = \set{\texttt{a}, \texttt{b}}\):
-        \[
-            L = \set{x_1\#x_2\#...\#x_k \mid k \ge 1, \text{ each } x_i \in \Sigma^* \text{ and for some } i \text{ and } j \text{, } x_i = {x_j}^R}
-        \]    
+    \textbf{\{Computation of  Time Complexity of some algorithms, Some examples of NP Complete problems\}}
+    \\Assess the time complexity of the following problems to determine if they are in the class P, NP and/or NP-Complete. Prove your answer to each part.
+    \\(a) \(C = \set{\langle G\rangle \mid \text{G is a connected undirected graph}}\).
+    \\(b) \(D = \set{\langle G, k\rangle \mid \text{G has a dominating set with }k\text{ nodes}}\)
+    \\NOTE: A subset of the nodes of a graph G is a dominating set if every other node of G is adjacent to some node in the subset.
+    \\(c) \(E = \set{\langle G\rangle \mid \text{G is an undirected graph that contains a Euler circuit}}\).
+    \\NOTE: An Euler circuit of the graph is a simple cycle that includes all edges.
 \end{enumerate}
 % -------------
 \end{document}
