@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt, article, oneside]{memoir}
+
+% Some useful packages
+\usepackage
+{
+  microtype,
+  blindtext,
+  multirow,
+  makecell,
+  graphicx,
+  hyperref,
+  nicematrix,
+  mathtools,
+  amsthm,
+  amssymb,
+  thmtools,
+  bm,
+  siunitx,
+  caption
+}
+
+%% PDF Metadata
+\hypersetup
+{
+  hidelinks,
+  pdftitle    = Title,
+  pdfauthor   = Ashnah Khalid Khan
+}
+
+
+% Page Layout for Printing A4
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout%
+
+
+% Page Style
+\makepagestyle{SD}
+\nouppercaseheads
+\makeoddhead{SD}{\textsc{Theory of Automata}}{}{\textsc{Summer 2023}}
+\makeoddfoot{SD}{}{\thepage}{}
+\makeheadrule{SD}{\textwidth}{\normalrulethickness}
+% \makefootrule{SD}{\textwidth}{\normalrulethickness}
+\pagestyle{SD}
+
+% Paragraph Indent
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+% Command to make writing sets easier
+\newcommand{\set}[1]{\{\, #1\, \}}
+
+% Absolute Value Operator
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\begin{document}
+% -------------
+\begin{center}
+\LARGE{\textsc{Problem Set 3}}
+ 
+\large{\textsc{Ms. Asma Sanam Larik}}
+\end{center}
+
+   % 1. Design of Turing Machine single tape. 
+   % 2. Design of Multitape TM
+   % 3. Proof on equivalence of various models of TM
+   % 4. Some decidable languages and their proofs
+   % 5. Examples of Undecidable languages
+   % 6. Design of enumerator as Turing recognizable language
+   % 7. One example of Turing Unrecognizable language
+   % 8. Reducibility of one problem to another
+   % 9. Computation of  Time Complexity of some algorithms
+   % 10. Some examples of NP Complete problems.
+
+\begin{enumerate}
+    % 1. Design of Turing Machine single tape. 
+    \item
+    \textbf{\{Design of Turing Machine single tape\}}
+    \\Design a Turing machine that accepts the language \(L = \set{ bb\Sigma^* \mid \Sigma = \set{a, b}}\). Assume that the transition function \( \delta \) for the TM is defined as \( \delta : Q \times \Gamma \rightarrow Q \times \Gamma \times \set{L,R}\).
+
+    % 2. Design of Multitape TM
+    \item
+    \textbf{\{Design of Multitape TM\}}
+
+    % 3. Proof on equivalence of various models of TM
+    \item
+    \textbf{\{Proof on equivalence of various models of TM\}}
+    \\Consider a Turing machine that, on any particular move, can either change the tape symbol or move the read-write head, but not both.
+    \\(a) Give a formal definition of such a machine.
+    \\(b) Show that the class of such machines is equivalent to the class of standard Turing machines.
+
+    % 4. Some decidable languages and their proofs
+    \item
+    \textbf{\{Some decidable languages and their proofs\}}
+    \\(a) Let \(A = \set{\langle R, S\rangle \mid \text{R and S are regular expressions and }L(R) \subseteq L(S)}\). Show that A is decidable.
+    \\(b) Consider the problem of determining whether a DFA and a regular expression are equivalent. Express this problem as a language B and show that B is decidable.
+
+    % 5. Examples of Undecidable languages
+    \item
+    \textbf{\{Examples of Undecidable languages\}}
+    \\Let \(T = \set{\langle M\rangle \mid \text{M is a TM that accepts }w^R \text{ whenever it accepts w}}\). Show that T is undecidable.
+
+    % 6. Design of enumerator as Turing recognizable language
+    % 8. Reducibility of one problem to another
+    \item
+    \textbf{\{Design of enumerator as Turing recognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
+    \\Let \(E^{TM} = \set{\langle M\rangle \mid \text{M is a TM and }L(M) = \emptyset}\). Show that \(\overline{E^{TM}}\), the complement of \(E^{TM}\), is:
+    \\(a) Turing-recognizable, using an enumerator.
+    \\(b) undecidable, using a reduction from another undecidable language.
+
+    % 7. One example of Turing Unrecognizable language
+    % 8. Reducibility of one problem to another
+    \item
+    \textbf{\{One example of Turing Unrecognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
+    \\Let \(I = \set{\langle M\rangle \mid \text{M is a TM and L(M) is an infinite language}}\). Show that \(I\) is:
+    \\(a) undecidable, using a reduction from another undecidable language.
+    \\(b) Turing-\textbf{un}recognizable, using a reduction from another \textbf{un}recognizable language.
+
+    % 9. Computation of  Time Complexity of some algorithms
+    % 10. Some examples of NP Complete problems.
+    \item
+    \textbf{\{Computation of  Time Complexity of some algorithms, Some examples of NP Complete problems\}}
+    \\Assess the time complexity of the following problems to determine if they are in the class P, NP and/or NP-Complete. Prove your answer to each part.
+    \\(a) \(C = \set{\langle G\rangle \mid \text{G is a connected undirected graph}}\).
+    \\(b) \(D = \set{\langle G, k\rangle \mid \text{G has a dominating set with }k\text{ nodes}}\)
+    \\NOTE: A subset of the nodes of a graph G is a dominating set if every other node of G is adjacent to some node in the subset.
+    \\(c) \(E = \set{\langle G\rangle \mid \text{G is an undirected graph that contains a Euler circuit}}\).
+    \\NOTE: An Euler circuit of the graph is a simple cycle that includes all edges.
+\end{enumerate}
+% -------------
+\end{document}
