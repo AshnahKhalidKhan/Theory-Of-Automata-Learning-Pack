@@ -92,52 +92,52 @@
     % 1. Design of Turing Machine single tape. 
     % 2. Design of Multitape TM
     \item
-    \textbf{\{Design of Turing Machine single tape, Design of Multitape TM\}}
-    \\The function \(MULTIPLICATION\) means that our TM starts with \(0^m10^n1\) on its tape, and ends with \(0^{m \times n}\) on its tape, where \(m\) and \(n\) may be greater than or equal to 0.
+    % \textbf{\{Design of Turing Machine single tape, Design of Multitape TM\}}
+    The function \(MULTIPLICATION\) means that our TM starts with \(0^m10^n1\) on its tape, and ends with \(0^{m \times n}\) on its tape, where \(m\) and \(n\) may be greater than or equal to 0.
     \\(a) Design a \textbf{single-tape} TM that implements \(MULTIPLICATION\).
     \\(b) Design a \textbf{multi-tape} TM that implements \(MULTIPLICATION\).
    
 
     % 3. Proof on equivalence of various models of TM
     \item
-    \textbf{\{Proof on equivalence of various models of TM\}}
-    \\Design a \textbf{2-tape TM} for the language L such that \(L = \set{w \mid \text{w has an equal number of 1's and 0's}}\).
+    % \textbf{\{Proof on equivalence of various models of TM\}}
+    Design a \textbf{2-tape TM} for the language L such that \(L = \set{w \mid \text{w has an equal number of 1's and 0's}}\).
     \\Hint: The first tape contains the input and is scanned from left to right. The second tape is used to store the excess of 0s over 1s or vice versa in the part of the input seen so far.
 
     % 4. Some decidable languages and their proofs
     \item
-    \textbf{\{Some decidable languages and their proofs\}}
-    \\Show that the following languages are decidable:
+    % \textbf{\{Some decidable languages and their proofs\}}
+    Show that the following languages are decidable:
     \\(a) \(L_1 = \set{\langle R, S\rangle \mid \text{R and S are regular expressions and }L(R) \subseteq L(S)}\).
     \\(b) \(L_2 = \set{\langle D\rangle \mid \text{ D is a DFA and L(D) = }\Sigma^*}\).
     \\(c) \(L_3 = \set{\langle C\rangle \mid \text{ C is a CFG and C generates }\lambda}\).
 
     % 5. Examples of Undecidable languages
     \item
-    \textbf{\{Examples of Undecidable languages\}}
-    \\Let \(T = \set{\langle M\rangle \mid \text{M is a TM that accepts }w^R \text{ whenever it accepts w}}\). Show that T is undecidable.
+    % \textbf{\{Examples of Undecidable languages\}}
+    Let \(T = \set{\langle M\rangle \mid \text{M is a TM that accepts }w^R \text{ whenever it accepts w}}\). Show that T is undecidable.
 
     % 6. Design of enumerator as Turing recognizable language
     % 8. Reducibility of one problem to another
     \item
-    \textbf{\{Design of enumerator as Turing recognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
-    \\Let \(E^{TM} = \set{\langle M\rangle \mid \text{M is a TM and }L(M) = \emptyset}\). Show that \(\overline{E^{TM}}\), the complement of \(E^{TM}\), is:
+    % \textbf{\{Design of enumerator as Turing recognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
+    Let \(E^{TM} = \set{\langle M\rangle \mid \text{M is a TM and }L(M) = \emptyset}\). Show that \(\overline{E^{TM}}\), the complement of \(E^{TM}\), is:
     \\(a) Turing-recognizable, using an enumerator.
     \\(b) undecidable, using a reduction from another undecidable language.
 
     % 7. One example of Turing Unrecognizable language
     % 8. Reducibility of one problem to another
     \item
-    \textbf{\{One example of Turing Unrecognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
-    \\Let \(I = \set{\langle M\rangle \mid \text{M is a TM and L(M) is an infinite language}}\). Show that \(I\) is:
+    % \textbf{\{One example of Turing Unrecognizable language, Examples of Undecidable languages, Reducibility of one problem to another\}}
+    Let \(I = \set{\langle M\rangle \mid \text{M is a TM and L(M) is an infinite language}}\). Show that \(I\) is:
     \\(a) undecidable, using a reduction from another undecidable language.
     \\(b) Turing-\textbf{un}recognizable, using a reduction from another \textbf{un}recognizable language.
 
     % 9. Computation of  Time Complexity of some algorithms
     % 10. Some examples of NP Complete problems.
     \item
-    \textbf{\{Computation of  Time Complexity of some algorithms, Some examples of NP Complete problems\}}
-    \\Assess the time complexity of the following problems to determine if they are in the class P, NP and/or NP-Complete. Prove your answer to each part.
+    % \textbf{\{Computation of  Time Complexity of some algorithms, Some examples of NP Complete problems\}}
+    Assess the time complexity of the following problems to determine if they are in the class P, NP and/or NP-Complete. Prove your answer to each part.
     \\(a) \(C = \set{\langle G\rangle \mid \text{G is a connected undirected graph}}\).
     \\(b) \(D = \set{\langle G, k\rangle \mid \text{G has a dominating set with }k\text{ nodes}}\)
     \\NOTE: A subset of the nodes of a graph G is a dominating set if every other node of G is adjacent to some node in the subset.
