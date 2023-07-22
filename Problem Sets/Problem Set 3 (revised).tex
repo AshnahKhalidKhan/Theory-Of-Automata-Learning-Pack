@@ -90,26 +90,27 @@
 
 \begin{enumerate}
     % 1. Design of Turing Machine single tape. 
-    \item
-    \textbf{\{Design of Turing Machine single tape\}}
-    \\Design a Turing machine that accepts the language \(L = \set{ bb\Sigma^* \mid \Sigma = \set{a, b}}\). Assume that the transition function \( \delta \) for the TM is defined as \( \delta : Q \times \Gamma \rightarrow Q \times \Gamma \times \set{L,R}\).
-
     % 2. Design of Multitape TM
     \item
-    \textbf{\{Design of Multitape TM\}}
+    \textbf{\{Design of Turing Machine single tape, Design of Multitape TM\}}
+    \\The function \(MULTIPLICATION\) means that our TM starts with \(0^m10^n1\) on its tape, and ends with \(0^{m \times n}\) on its tape, where \(m\) and \(n\) may be greater than or equal to 0.
+    \\(a) Design a \textbf{single-tape} TM that implements \(MULTIPLICATION\).
+    \\(b) Design a \textbf{multi-tape} TM that implements \(MULTIPLICATION\).
+   
 
     % 3. Proof on equivalence of various models of TM
     \item
     \textbf{\{Proof on equivalence of various models of TM\}}
-    \\Consider a Turing machine that, on any particular move, can either change the tape symbol or move the read-write head, but not both.
-    \\(a) Give a formal definition of such a machine.
-    \\(b) Show that the class of such machines is equivalent to the class of standard Turing machines.
+    \\Design a \textbf{2-tape TM} for the language L such that \(L = \set{w \mid \text{w has an equal number of 1's and 0's}}\).
+    \\Hint: The first tape contains the input and is scanned from left to right. The second tape is used to store the excess of 0s over 1s or vice versa in the part of the input seen so far.
 
     % 4. Some decidable languages and their proofs
     \item
     \textbf{\{Some decidable languages and their proofs\}}
-    \\(a) Let \(A = \set{\langle R, S\rangle \mid \text{R and S are regular expressions and }L(R) \subseteq L(S)}\). Show that A is decidable.
-    \\(b) Consider the problem of determining whether a DFA and a regular expression are equivalent. Express this problem as a language B and show that B is decidable.
+    \\Show that the following languages are decidable:
+    \\(a) \(L_1 = \set{\langle R, S\rangle \mid \text{R and S are regular expressions and }L(R) \subseteq L(S)}\).
+    \\(b) \(L_2 = \set{\langle D\rangle \mid \text{ D is a DFA and L(D) = }\Sigma^*}\).
+    \\(c) \(L_3 = \set{\langle C\rangle \mid \text{ C is a CFG and C generates }\lambda}\).
 
     % 5. Examples of Undecidable languages
     \item
