@@ -74,6 +74,21 @@
     \item
         Let \(\Sigma = \set{a, b, c}\) and \(L = \set{ {a^i}{b^j}{c^k} \mid i, j, k \ge 0 \text{ and if } i = 1,  \text{ then } j = k}\). Show that \textit{L} is not regular using the pumping lemma.
         \\\textbf{Hint:} You must show both cases where when \(w = xyz\) that \(x = \lambda\) and where \(x\) is composed of some characters.
+
+        \textbf{Solution:}
+        \\\textbf{a)} Observe all strings in A start with one \(a\), are followed by at least three \(b\)'s and then by at least one other character.
+        \\\textbf{b)} Observe all strings in B start and end with any one of these strings \{\(aa, ab, ba, bb\)\}, and can have any other characters including \(\lambda\) in between.
+        \\\textbf{c)} Observe all strings in C start and end with any one of these strings
+        \{\(\lambda,\) \textit{a, b, aa, ab, ba, bb, aaa, aab, aba, abb, baa, bab, bba, bbb}\},
+        and can have any other characters including \(\lambda\) in between.
+
+        \textbf{Grading Scheme:}
+        \\+0.5 marks - Attempt at making any regular expression for \textbf{all} parts.
+        \\+1.5 marks - \(a.bbb.\{b\}^*.\Sigma^*\) or equivalent expression for \textbf{(a)}
+        \\+1.5 marks - \(\Sigma^2.\Sigma^*.\Sigma^2\) or equivalent expression for \textbf{(b)}
+        \\+1.5 marks - \(\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}.\Sigma^*.\{\lambda \cup \Sigma \cup \Sigma^2 \cup \Sigma^3\}\) or equivalent expression for \textbf{(c)}
+
+
         
     % 2.
     \item 
