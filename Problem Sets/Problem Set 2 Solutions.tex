@@ -93,9 +93,9 @@
         
         \textbf{Solution:}
         \\\(w\) can be any string which is a valid addition, for example:
-        \\Let \(w = xyz\) and \(w = 1^p+0^p=1^p\).
-        \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z = 1^{p - j - k}+0^p=1^p\).
-        \\Then \(w_i = 1^j(1^k)^i(b^{p - m}1^{p - j - k}+0^p=1^p)\).
+        \\Let \(w = xyz\) and \(w = {1^p+0^p=1^p}\).
+        \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z = {1^{p - j - k}+0^p=1^p}\).
+        \\Then \(w_i = {1^j(1^k)^i(b^{p - m}1^{p - j - k}+0^p=1^p}\).
         \\Pump up to get \(w_2 = (ab^m)^2(b^{p - m}c^p) = ab^mab^mb^{p - m}c^p = ab^mab^pc^p\) which does not belong to the language so we have a contradiction.
         \\If \(x = ab^n, y = b^m\) and \(z = b^{p - m - n}c^p\) then \(w_i = (ab^n)(b^m)^i(b^{p - m - n}c^p)\). Pump up to get \(w_2 = (ab^n)(b^m)^2(b^{p - m - n}c^p) = ab^nb^mb^mb^{p - m - n}c^p = ab^{p + m}c^p\) which does not belong to the language so we have a contradiction.
 
