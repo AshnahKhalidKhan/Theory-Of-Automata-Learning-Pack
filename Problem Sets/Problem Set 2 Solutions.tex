@@ -93,10 +93,13 @@
         
         \textbf{Solution:}
         \\\(w\) can be any string which is a valid addition, for example:
-        \\Let \(w = xyz\) and \(w = {1^p+0^p=1^p}\).
-        \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z = {1^{p - j - k}+0^p=1^p}\).
-        \\Then \(w_i = {(1^j)(1^k)^i(1^{p - j - k}+0^p=1^p)}\).
-        \\Pump up to get \(w_2 = {(1^j)(1^k)^2(1^{p - j - k}+0^p=1^p)} = {1^j1^k1^k1^{p - j - k}+0^p=1^p}\) which does not belong to the language so we have a contradiction.
+        \\Let \(w = xyz\) and \(w => {1^p+0^p=1^p}\).
+        \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z => {1^{p - j - k}+0^p=1^p}\).
+        \\Then \(w_i => {(1^j)(1^k)^i(1^{p - j - k}+0^p=1^p)}\).
+        \\Pump up to get \(w_2 => {(1^j)(1^k)^2(1^{p - j - k}+0^p=1^p)}
+        \\=> {1^j1^k1^k1^{p - j - k}+0^p=1^p}
+        \\=> {1^{p+k}+0^p=1^p}\)
+        \\which is not a valid addition operation so it does not belong to the language so we have a contradiction.
 
         \textbf{Grading Scheme:}
         \\+1 mark - Chose a string \(w\) that belongs to the language
