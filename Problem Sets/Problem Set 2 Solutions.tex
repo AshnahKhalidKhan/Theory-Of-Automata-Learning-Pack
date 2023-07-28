@@ -92,8 +92,8 @@
         Let \(\Sigma = \set{0, 1, +, =}\) and \(ADD = \{ u+v=w \mid u, v, w \in \set{0, 1}^* \text{ and } u+v=w \text{ is a valid addition operation}\}\). Show that \textit{ADD} is not regular using the pumping lemma.
         
         \textbf{Solution:}
-        \\Let \(w = xyz\) and \(w = ab^pc^p\).
-        \\If \(x = \lambda, y = ab^m\) and \(z = b^{p - m}c^p\) then \(w_i = \lambda(a^m)^i(b^{p - m}c^p)\). Pump up to get \(w_2 = (ab^m)^2(b^{p - m}c^p) = ab^mab^mb^{p - m}c^p = ab^mab^pc^p\) which does not belong to the language so we have a contradiction.
+        \\Let \(w = xyz\) and \(w = 1^p+0^p=1^p\).
+        \\If \(x = 1^j, y = 1^{k}\) where \(\), and \(z = b^{p - m}c^p\) then \(w_i = \lambda(a^m)^i(b^{p - m}c^p)\). Pump up to get \(w_2 = (ab^m)^2(b^{p - m}c^p) = ab^mab^mb^{p - m}c^p = ab^mab^pc^p\) which does not belong to the language so we have a contradiction.
         \\If \(x = ab^n, y = b^m\) and \(z = b^{p - m - n}c^p\) then \(w_i = (ab^n)(b^m)^i(b^{p - m - n}c^p)\). Pump up to get \(w_2 = (ab^n)(b^m)^2(b^{p - m - n}c^p) = ab^nb^mb^mb^{p - m - n}c^p = ab^{p + m}c^p\) which does not belong to the language so we have a contradiction.
 
         \textbf{Grading Scheme:}
