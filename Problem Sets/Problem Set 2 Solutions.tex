@@ -95,8 +95,8 @@
         \\\(w\) can be any string which is a valid addition, for example:
         \\Let \(w = xyz\) and \(w = {1^p+0^p=1^p}\).
         \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z = {1^{p - j - k}+0^p=1^p}\).
-        \\Then \(w_i = {(1^j)(1^k)^i(b^{p - m}1^{p - j - k}+0^p=1^p)}\).
-        \\Pump up to get \(w_2 = {(1^j)(1^k)^i(b^{p - m}1^{p - j - k}+0^p=1^p)} = ab^mab^mb^{p - m}c^p = ab^mab^pc^p\) which does not belong to the language so we have a contradiction.
+        \\Then \(w_i = {(1^j)(1^k)^i(1^{p - j - k}+0^p=1^p)}\).
+        \\Pump up to get \(w_2 = {(1^j)(1^k)^2(1^{p - j - k}+0^p=1^p)} = {1^j1^k1^k1^{p - j - k}+0^p=1^p}\) which does not belong to the language so we have a contradiction.
 
         \textbf{Grading Scheme:}
         \\+1 mark - Chose a string \(w\) that belongs to the language
