@@ -92,7 +92,8 @@
         Let \(\Sigma = \set{0, 1, +, =}\) and \(ADD = \{ u+v=w \mid u, v, w \in \set{0, 1}^* \text{ and } u+v=w \text{ is a valid addition operation}\}\). Show that \textit{ADD} is not regular using the pumping lemma.
         
         \textbf{Solution:}
-        \\Let \(w = xyz\) and \(w = "1^p+0^p=1^p"\).
+        \\\(w\) can be any string which is a valid addition, for example:
+        \\Let \(w = xyz\) and \(w = 1^p+0^p=1^p\).
         \\And let \(x = 1^j, y = 1^k\) where \(|xy| \leq p\), and \(z = 1^{p - j - k}+0^p=1^p\).
         \\Then \(w_i = 1^j(1^k)^i(b^{p - m}1^{p - j - k}+0^p=1^p)\).
         \\Pump up to get \(w_2 = (ab^m)^2(b^{p - m}c^p) = ab^mab^mb^{p - m}c^p = ab^mab^pc^p\) which does not belong to the language so we have a contradiction.
